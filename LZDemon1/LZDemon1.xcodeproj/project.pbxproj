@@ -18,6 +18,7 @@
 		CB90DA4A1BABDC8900A1E7BE /* LZFiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB90DA491BABDC8900A1E7BE /* LZFiveViewController.m */; };
 		CB90DA4D1BABE05700A1E7BE /* LZTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB90DA4C1BABE05700A1E7BE /* LZTwoViewController.m */; };
 		CB90DA501BABEA6E00A1E7BE /* LZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB90DA4F1BABEA6E00A1E7BE /* LZBaseViewController.m */; };
+		CB90DA531BAC180E00A1E7BE /* LZSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB90DA521BAC180E00A1E7BE /* LZSubViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		CB90DA4C1BABE05700A1E7BE /* LZTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTwoViewController.m; sourceTree = "<group>"; };
 		CB90DA4E1BABEA6E00A1E7BE /* LZBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBaseViewController.h; sourceTree = "<group>"; };
 		CB90DA4F1BABEA6E00A1E7BE /* LZBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBaseViewController.m; sourceTree = "<group>"; };
+		CB90DA511BAC180E00A1E7BE /* LZSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSubViewController.h; sourceTree = "<group>"; };
+		CB90DA521BAC180E00A1E7BE /* LZSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSubViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 				CB90DA161BABD41E00A1E7BE /* Supporting Files */,
 				CB90DA4E1BABEA6E00A1E7BE /* LZBaseViewController.h */,
 				CB90DA4F1BABEA6E00A1E7BE /* LZBaseViewController.m */,
+				CB90DA511BAC180E00A1E7BE /* LZSubViewController.h */,
+				CB90DA521BAC180E00A1E7BE /* LZSubViewController.m */,
 			);
 			path = LZDemon1;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 				CB90DA4A1BABDC8900A1E7BE /* LZFiveViewController.m in Sources */,
 				CB90DA3E1BABD99400A1E7BE /* LZOnewViewController.m in Sources */,
 				CB90DA441BABDC7100A1E7BE /* LZThreeViewController.m in Sources */,
+				CB90DA531BAC180E00A1E7BE /* LZSubViewController.m in Sources */,
 				CB90DA191BABD41E00A1E7BE /* main.m in Sources */,
 				CB90DA4D1BABE05700A1E7BE /* LZTwoViewController.m in Sources */,
 			);

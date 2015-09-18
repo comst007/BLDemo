@@ -7,7 +7,7 @@
 //
 
 #import "LZOnewViewController.h"
-
+#import "LZSubViewController.h"
 @interface LZOnewViewController ()
 
 @end
@@ -25,10 +25,12 @@
     UIButton *pushBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [pushBtn setBackgroundColor:[UIColor redColor]];
     [pushBtn setTitle:@"Push" forState:UIControlStateNormal];
+    [pushBtn addTarget:self action:@selector(pushBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     UIButton *presentBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [presentBtn setBackgroundColor:[UIColor blueColor]];
     [presentBtn setTitle:@"present" forState:UIControlStateNormal];
+    [presentBtn addTarget:self action:@selector(presentBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     pushBtn.translatesAutoresizingMaskIntoConstraints = NO;
     presentBtn.translatesAutoresizingMaskIntoConstraints = NO;
@@ -49,6 +51,18 @@
     
 }
 
+
+#pragma mark - btn click
+
+- (void)pushBtnClick{
+    LZSubViewController *vc = [[LZSubViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)presentBtnClick{
+    LZSubViewController *vc = [[LZSubViewController alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
+}
 
 
 @end
