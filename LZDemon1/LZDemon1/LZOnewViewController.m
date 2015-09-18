@@ -18,11 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     UIImage *img = [UIImage imageNamed:@"bg1"];
-    UIImageView *imgView = [[UIImageView alloc] initWithImage:img];
-    imgView.frame = self.view.bounds;
-    
-    
-    [self.view addSubview:imgView];
+   
+    self.imgView.image = img;
 }
 
 

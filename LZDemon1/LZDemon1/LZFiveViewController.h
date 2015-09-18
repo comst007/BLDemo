@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface LZFiveViewController : UIViewController
+#import "LZBaseViewController.h"
+@interface LZFiveViewController : LZBaseViewController
 
 @end

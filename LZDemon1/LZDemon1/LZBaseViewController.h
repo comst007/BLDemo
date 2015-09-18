@@ -1,5 +1,5 @@
 //
-//  LZOnewViewController.h
+//  LZBaseViewController.h
 //  LZDemon1
 //
 //  Created by comst on 15/9/18.
@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LZBaseViewController.h"
-@interface LZOnewViewController : LZBaseViewController
+
+@interface LZBaseViewController : UIViewController
+
+@property (nonatomic, strong) UIImageView *imgView;;
 
 @end

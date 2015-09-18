@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface LZFourViewController : UIViewController
+#import "LZBaseViewController.h"
+@interface LZFourViewController : LZBaseViewController
 
 @end

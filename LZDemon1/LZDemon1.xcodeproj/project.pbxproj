@@ -17,6 +17,7 @@
 		CB90DA471BABDC7F00A1E7BE /* LZFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB90DA461BABDC7F00A1E7BE /* LZFourViewController.m */; };
 		CB90DA4A1BABDC8900A1E7BE /* LZFiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB90DA491BABDC8900A1E7BE /* LZFiveViewController.m */; };
 		CB90DA4D1BABE05700A1E7BE /* LZTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB90DA4C1BABE05700A1E7BE /* LZTwoViewController.m */; };
+		CB90DA501BABEA6E00A1E7BE /* LZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB90DA4F1BABEA6E00A1E7BE /* LZBaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		CB90DA491BABDC8900A1E7BE /* LZFiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZFiveViewController.m; sourceTree = "<group>"; };
 		CB90DA4B1BABE05700A1E7BE /* LZTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTwoViewController.h; sourceTree = "<group>"; };
 		CB90DA4C1BABE05700A1E7BE /* LZTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTwoViewController.m; sourceTree = "<group>"; };
+		CB90DA4E1BABEA6E00A1E7BE /* LZBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBaseViewController.h; sourceTree = "<group>"; };
+		CB90DA4F1BABEA6E00A1E7BE /* LZBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 				CB90DA231BABD41E00A1E7BE /* Images.xcassets */,
 				CB90DA251BABD41E00A1E7BE /* LaunchScreen.xib */,
 				CB90DA161BABD41E00A1E7BE /* Supporting Files */,
+				CB90DA4E1BABEA6E00A1E7BE /* LZBaseViewController.h */,
+				CB90DA4F1BABEA6E00A1E7BE /* LZBaseViewController.m */,
 			);
 			path = LZDemon1;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB90DA471BABDC7F00A1E7BE /* LZFourViewController.m in Sources */,
+				CB90DA501BABEA6E00A1E7BE /* LZBaseViewController.m in Sources */,
 				CB90DA1C1BABD41E00A1E7BE /* AppDelegate.m in Sources */,
 				CB90DA4A1BABDC8900A1E7BE /* LZFiveViewController.m in Sources */,
 				CB90DA3E1BABD99400A1E7BE /* LZOnewViewController.m in Sources */,
