@@ -20,7 +20,9 @@
     UIImage *img = [UIImage imageNamed:@"bg5"];
     
     self.imgView.image = img;
+    self.title = @"Five";
 }
+
 
 
 @end

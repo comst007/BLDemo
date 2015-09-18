@@ -20,6 +20,7 @@
     UIImage *img = [UIImage imageNamed:@"bg1"];
    
     self.imgView.image = img;
+    self.title = @"One";
 }
 
 

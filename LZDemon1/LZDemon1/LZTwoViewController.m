@@ -19,6 +19,7 @@
     // Do any additional setup after loading the view.
     UIImage *img = [UIImage imageNamed:@"bg2"];
     self.imgView.image = img;
+    self.navigationItem.title = @"Two";
 }
 
 
