@@ -442,6 +442,7 @@
 				CB90DA381BABD41E00A1E7BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB90DA391BABD41E00A1E7BE /* Build configuration list for PBXNativeTarget "LZDemon1Tests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +451,7 @@
 				CB90DA3B1BABD41E00A1E7BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
