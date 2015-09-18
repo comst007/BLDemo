@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LZFiveViewController.h
 //  LZDemon1
 //
 //  Created by comst on 15/9/18.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LZFiveViewController : UIViewController
 
 @end
-

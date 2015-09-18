@@ -7,16 +7,76 @@
 //
 
 #import "AppDelegate.h"
-
+#import "LZOnewViewController.h"
+#import "LZTwoViewController.h"
+#import "LZThreeViewController.h"
+#import "LZFourViewController.h"
+#import "LZFiveViewController.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+- (void)loadMainFrame{
+    
+    LZOnewViewController *oneView = [[LZOnewViewController alloc] init];
+    
+    UINavigationController *nvc1 = [[UINavigationController alloc] initWithRootViewController:oneView];
+    
+    UITabBarController *tabBar = [[UITabBarController alloc] init];
+    
+    nvc1.tabBarItem.image = [UIImage imageNamed:@"one"];
+    nvc1.tabBarItem.title = @"one";
+    
+    LZTwoViewController *twoView = [[LZTwoViewController alloc] init];
+    UINavigationController *nvc2 = [[UINavigationController alloc] initWithRootViewController:twoView];
+    
+    
+    nvc2.tabBarItem.image = [UIImage imageNamed:@"two"];
+    nvc2.tabBarItem.title = @"two";
+    
+    LZThreeViewController *threeView = [[LZThreeViewController alloc] init];
+    
+    UINavigationController *nvc3 = [[UINavigationController alloc] initWithRootViewController:threeView];
+    
+    
+    
+    nvc3.tabBarItem.image = [UIImage imageNamed:@"three"];
+    nvc3.tabBarItem.title = @"three";
+    
+    LZFourViewController *fourView = [[LZFourViewController alloc] init];
+    UINavigationController *nvc4 = [[UINavigationController alloc] initWithRootViewController:fourView];
+    
+    
+    nvc4.tabBarItem.image = [UIImage imageNamed:@"four"];
+    nvc4.tabBarItem.title = @"four";
+    
+    
+    LZFiveViewController *fiveView = [[LZFiveViewController alloc] init];
+    UINavigationController *nvc5 = [[UINavigationController alloc] initWithRootViewController:fiveView];
+    
+  
+    
+    nvc5.tabBarItem.image = [UIImage imageNamed:@"five"];
+    nvc5.tabBarItem.title = @"five";
+    
+    
+    
+    tabBar.viewControllers = @[nvc1, nvc2, nvc3, nvc4, nvc5];
+    self.window.rootViewController = tabBar;
+    
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    [self loadMainFrame];
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
