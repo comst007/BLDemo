@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB2F16E71BB0710400E8DF35 /* LZAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2F16E61BB0710400E8DF35 /* LZAnnotation.m */; };
 		CB90DA191BABD41E00A1E7BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB90DA181BABD41E00A1E7BE /* main.m */; };
 		CB90DA1C1BABD41E00A1E7BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB90DA1B1BABD41E00A1E7BE /* AppDelegate.m */; };
 		CB90DA241BABD41E00A1E7BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB90DA231BABD41E00A1E7BE /* Images.xcassets */; };
@@ -33,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		CB0488CA1BAD6A5B001C8458 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		CB2F16E51BB0710400E8DF35 /* LZAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAnnotation.h; sourceTree = "<group>"; };
+		CB2F16E61BB0710400E8DF35 /* LZAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAnnotation.m; sourceTree = "<group>"; };
 		CB90DA131BABD41E00A1E7BE /* LZDemon1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZDemon1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB90DA171BABD41E00A1E7BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB90DA181BABD41E00A1E7BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				CB90DA4F1BABEA6E00A1E7BE /* LZBaseViewController.m */,
 				CB90DA511BAC180E00A1E7BE /* LZSubViewController.h */,
 				CB90DA521BAC180E00A1E7BE /* LZSubViewController.m */,
+				CB2F16E51BB0710400E8DF35 /* LZAnnotation.h */,
+				CB2F16E61BB0710400E8DF35 /* LZAnnotation.m */,
 			);
 			path = LZDemon1;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB2F16E71BB0710400E8DF35 /* LZAnnotation.m in Sources */,
 				CB90DA471BABDC7F00A1E7BE /* LZFourViewController.m in Sources */,
 				CB90DA501BABEA6E00A1E7BE /* LZBaseViewController.m in Sources */,
 				CB90DA1C1BABD41E00A1E7BE /* AppDelegate.m in Sources */,
