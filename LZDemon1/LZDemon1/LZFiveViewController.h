@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LZBaseViewController.h"
+#import "LZAnnotation.h"
 @interface LZFiveViewController : LZBaseViewController
 
 @end

@@ -10,4 +10,14 @@
 
 @implementation LZAnnotation 
 
+- (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate andTitle:(NSString *)title andSubtitle:(NSString *)subtitle{
+    
+    self = [super init];
+    if (self) {
+        self.coordinate = coordinate;
+        self.title = title;
+        self.subtitle = subtitle;
+    }
+    return self;
+}
 @end

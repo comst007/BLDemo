@@ -76,7 +76,7 @@
     CGFloat mapviewH = self.view.bounds.size.height - 20 - 44 - self.label.frame.size.height - 44;
     self.mapview.frame = CGRectMake(mapviewX, mapviewY, mapviewW, mapviewH);
     self.mapview.delegate = self;
-    self.mapview.region = MKCoordinateRegionMake(self.mapview.userLocation.location.coordinate, MKCoordinateSpanMake(1, 1));
+    self.mapview.region = MKCoordinateRegionMake(self.mapview.userLocation.location.coordinate, MKCoordinateSpanMake(0.1, 0.1));
     self.mapview.showsUserLocation = YES;
     self.mapview.showsBuildings = YES;
     self.mapview.userTrackingMode = MKUserTrackingModeFollowWithHeading;
@@ -85,7 +85,24 @@
     UITapGestureRecognizer *tapgesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(mapviewTapped:)];
     tapgesture.numberOfTapsRequired = 1;
     
-    [self.mapview addGestureRecognizer:tapgesture];
+    //[self.mapview addGestureRecognizer:tapgesture];
+    //114.046138,22.675652
+    CLLocationCoordinate2D coordinate1 = CLLocationCoordinate2DMake(22.675652, 114.046138);
+    LZAnnotation *annotaion1 = [[LZAnnotation alloc]  initWithCoordinate:coordinate1 andTitle:@"111111" andSubtitle:@"222222222"];
+    [self.mapview addAnnotation:annotaion1];
+    
+    //114.046556,22.676015
+    CLLocationCoordinate2D coordinate2 = CLLocationCoordinate2DMake(22.676015, 114.046556);
+    LZAnnotation *annotaion2 = [[LZAnnotation alloc]  initWithCoordinate:coordinate2 andTitle:@"aaaaaaa" andSubtitle:@"bbbbbbbbbbbbb"];
+    [self.mapview addAnnotation:annotaion2];
+    
+    //114.045415,22.675343
+    CLLocationCoordinate2D coordinate3 = CLLocationCoordinate2DMake(22.675343, 114.045415);
+    LZAnnotation *annotaion3 = [[LZAnnotation alloc]  initWithCoordinate:coordinate3 andTitle:@"+++++++++" andSubtitle:@"**********"];
+    [self.mapview addAnnotation:annotaion3];
+    
+    //[self.mapview showAnnotations:self.mapview.annotations animated:YES];
+    
     
     
 }
@@ -181,6 +198,37 @@
      NSLog(@"%s", __func__);
 }
 
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
+    MKPinAnnotationView *annotationview ;
+    
+    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+        return nil;
+    }
+    annotationview = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"LZAnnotationView"];
+    
+    if (annotationview == nil) {
+        annotationview = [[MKPinAnnotationView alloc] initWithAnnotation:nil reuseIdentifier:@"LZAnnotaionView"];
+        annotationview.canShowCallout = YES;
+        annotationview.pinColor = MKPinAnnotationColorPurple;
+        annotationview.animatesDrop = YES;
+        UIView *leftview = [[UIView alloc] init];
+        leftview.frame = CGRectMake(0, 0, 30, 30);
+        leftview.backgroundColor = [UIColor redColor];
+        annotationview.leftCalloutAccessoryView = leftview;
+        
+        UIView *rightview = [[UIView alloc] init];
+        rightview.backgroundColor = [UIColor greenColor];
+        rightview.frame = CGRectMake(0, 0, 30, 30);
+        annotationview.rightCalloutAccessoryView = rightview;
+    }
+    annotationview.annotation = annotation;
+    return annotationview;
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view{
+  NSLog(@"%s", __func__);
+}
+
 #pragma mark - tapgesture 
 
 - (void)mapviewTapped:(UITapGestureRecognizer*)gesture{
@@ -198,6 +246,10 @@
         CLPlacemark *place = [placemarks lastObject];
         
         weakSelf.label.text = place.name;
+        LZAnnotation *newAnnotation = [[LZAnnotation alloc] initWithCoordinate:coordinate andTitle:place.locality andSubtitle:place.name];
+        
+        [weakSelf.mapview addAnnotation:newAnnotation];
+        [weakSelf.mapview showAnnotations:weakSelf.mapview.annotations animated:YES];
     }
      ];
 }
