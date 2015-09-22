@@ -14,6 +14,8 @@
 		CBAC7C711BB202E600430342 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBAC7C701BB202E600430342 /* Images.xcassets */; };
 		CBAC7C741BB202E600430342 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBAC7C721BB202E600430342 /* LaunchScreen.xib */; };
 		CBAC7C801BB202E600430342 /* LZtableview02Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAC7C7F1BB202E600430342 /* LZtableview02Tests.m */; };
+		CBAC7C8B1BB2060100430342 /* LZUserAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAC7C8A1BB2060100430342 /* LZUserAccount.m */; };
+		CBAC7C8E1BB2079600430342 /* LZMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAC7C8D1BB2079600430342 /* LZMessage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		CBAC7C791BB202E600430342 /* LZtableview02Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZtableview02Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBAC7C7E1BB202E600430342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBAC7C7F1BB202E600430342 /* LZtableview02Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZtableview02Tests.m; sourceTree = "<group>"; };
+		CBAC7C891BB2060100430342 /* LZUserAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZUserAccount.h; sourceTree = "<group>"; };
+		CBAC7C8A1BB2060100430342 /* LZUserAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZUserAccount.m; sourceTree = "<group>"; };
+		CBAC7C8C1BB2079600430342 /* LZMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMessage.h; sourceTree = "<group>"; };
+		CBAC7C8D1BB2079600430342 /* LZMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMessage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,10 @@
 				CBAC7C6A1BB202E600430342 /* ViewController.h */,
 				CBAC7C6B1BB202E600430342 /* ViewController.m */,
 				CBAC7C6D1BB202E600430342 /* Main.storyboard */,
+				CBAC7C891BB2060100430342 /* LZUserAccount.h */,
+				CBAC7C8A1BB2060100430342 /* LZUserAccount.m */,
+				CBAC7C8C1BB2079600430342 /* LZMessage.h */,
+				CBAC7C8D1BB2079600430342 /* LZMessage.m */,
 				CBAC7C701BB202E600430342 /* Images.xcassets */,
 				CBAC7C721BB202E600430342 /* LaunchScreen.xib */,
 				CBAC7C631BB202E600430342 /* Supporting Files */,
@@ -219,6 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBAC7C8E1BB2079600430342 /* LZMessage.m in Sources */,
+				CBAC7C8B1BB2060100430342 /* LZUserAccount.m in Sources */,
 				CBAC7C6C1BB202E600430342 /* ViewController.m in Sources */,
 				CBAC7C691BB202E600430342 /* AppDelegate.m in Sources */,
 				CBAC7C661BB202E600430342 /* main.m in Sources */,
