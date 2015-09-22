@@ -103,7 +103,7 @@
     
     //[self.mapview showAnnotations:self.mapview.annotations animated:YES];
     
-    [self startNavigation];
+    [self startnavigation2];
     
     
     
@@ -267,7 +267,7 @@
 
 #pragma mark -- navigation
 
-- (void)startNavigation{
+- (void)startNavigation1{
     
     NSString *start = @"深圳市";
     NSString *destination = @"广州市";
@@ -347,5 +347,52 @@
     
     
     
+}
+
+- (void) startnavigation2{
+    NSString *start = @"深圳市";
+    NSString *destination = @"广州市";
+    
+    __block MKMapItem *sourceItem;
+    
+    __block MKMapItem *destItem;
+    
+    __block MKPlacemark *startPlacemark;
+    __block MKPlacemark *destPlacemark;
+    
+    __weak typeof(self) weakself = self;
+    
+    [weakself.geocoder geocodeAddressString:start completionHandler:^(NSArray *placemarks, NSError *error) {
+        CLPlacemark *place = [placemarks firstObject];
+        startPlacemark = [[MKPlacemark alloc] initWithPlacemark:place];
+        
+        
+        
+        [weakself.geocoder geocodeAddressString:destination completionHandler:^(NSArray *placemarks, NSError *error) {
+            CLPlacemark *place = [placemarks firstObject];
+            destPlacemark = [[MKPlacemark alloc] initWithPlacemark:place];
+            
+            MKDirectionsRequest *directionrequest;
+            directionrequest = [[MKDirectionsRequest alloc] init];
+            
+            sourceItem = [[MKMapItem alloc] initWithPlacemark:startPlacemark];
+            destItem = [[MKMapItem alloc] initWithPlacemark:destPlacemark];
+            
+            NSArray *itemArray = @[sourceItem, destItem];
+            
+            NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+            
+            dic[MKLaunchOptionsDirectionsModeKey] = MKLaunchOptionsDirectionsModeDriving;
+            dic[MKLaunchOptionsMapTypeKey] = @(MKMapTypeStandard);
+            dic[MKLaunchOptionsShowsTrafficKey] = @(YES);
+            dic[MKLaunchOptionsMapSpanKey] = [NSValue valueWithMKCoordinateSpan:MKCoordinateSpanMake(0.5, 0.5)];
+            
+            [MKMapItem openMapsWithItems:itemArray launchOptions:dic];
+            
+        }];
+        
+        
+        
+    }];
 }
 @end
