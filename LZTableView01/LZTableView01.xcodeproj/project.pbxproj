@@ -40,6 +40,7 @@
 		CB95F3EA1BB13DB500648CE7 /* LZTableView01Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZTableView01Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB95F3EF1BB13DB500648CE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB95F3F01BB13DB500648CE7 /* LZTableView01Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZTableView01Tests.m; sourceTree = "<group>"; };
+		CBAC7C541BB1D32E00430342 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +82,7 @@
 		CB95F3D31BB13DB400648CE7 /* LZTableView01 */ = {
 			isa = PBXGroup;
 			children = (
+				CBAC7C541BB1D32E00430342 /* Reveal.framework */,
 				CB95F3D81BB13DB400648CE7 /* AppDelegate.h */,
 				CB95F3D91BB13DB400648CE7 /* AppDelegate.m */,
 				CB95F3DB1BB13DB400648CE7 /* ViewController.h */,
@@ -347,8 +349,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LZTableView01",
+				);
 				INFOPLIST_FILE = LZTableView01/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -357,6 +369,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LZTableView01",
+				);
 				INFOPLIST_FILE = LZTableView01/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +432,7 @@
 				CB95F3F61BB13DB500648CE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB95F3F71BB13DB500648CE7 /* Build configuration list for PBXNativeTarget "LZTableView01Tests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +441,7 @@
 				CB95F3F91BB13DB500648CE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
