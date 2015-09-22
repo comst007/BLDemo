@@ -10,6 +10,7 @@
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableview;
+@property (nonatomic, assign) BOOL edit;
 @end
 
 @implementation ViewController
@@ -19,6 +20,10 @@
     // Do any additional setup after loading the view, typically from a nib.
     [self tableview];
     [self.tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:@"LZCell"];
+    
+    UIBarButtonItem *rightitem = [[UIBarButtonItem alloc] initWithTitle:@"edit" style:UIBarButtonItemStylePlain target:self action:@selector(editbtnClick:)];
+    
+    self.navigationItem.rightBarButtonItem = rightitem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -79,6 +84,23 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     return [NSString stringWithFormat:@"header:  section - %li", section];
 }
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0) {
+        return NO;
+    }
+    return YES;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
+    
+}
+
 #pragma mark - tableview delegate
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -98,9 +120,40 @@
     return view;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hello World" message:[NSString stringWithFormat:@"section-%li, row-%li", indexPath.section, indexPath.row] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hello World" message:[NSString stringWithFormat:@"section-%li, row-%li", indexPath.section, indexPath.row] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//    
+//    [alert show];
+//}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row % 2) {
+        return UITableViewCellEditingStyleDelete;
+    }
+    return UITableViewCellEditingStyleInsert;
+}
+
+- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"action1" handler:nil] ;
     
-    [alert show];
+    UITableViewRowAction *action2 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"action2" handler:nil];
+    
+    UITableViewRowAction *action3 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"action3" handler:nil];
+    return @[action1, action2, action3];
+}
+
+
+#pragma mark - barbuttonitem click
+
+- (void)editbtnClick:(UIBarButtonItem *)buttonitem{
+    self.edit = !self.edit;
+    if (self.edit) {
+        buttonitem.title = @"done";
+        self.tableview.editing = YES;
+    }else{
+        buttonitem.title = @"edit";
+        self.tableview.editing = NO;
+    }
+    
 }
 @end
