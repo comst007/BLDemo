@@ -103,6 +103,8 @@
     
     //[self.mapview showAnnotations:self.mapview.annotations animated:YES];
     
+    [self startNavigation];
+    
     
     
 }
@@ -132,7 +134,7 @@
     [manager stopUpdatingLocation];
     
     //self.label.text = currentlocation.description;
-    NSLog(@"floor: %li", currentlocation.floor.level);
+    NSLog(@"floor: %li", (long)currentlocation.floor.level);
     NSLog(@"altitude:%lf", currentlocation.altitude);
     NSDate *date = currentlocation.timestamp;
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
@@ -229,6 +231,15 @@
   NSLog(@"%s", __func__);
 }
 
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay{
+    MKPolylineRenderer *linerender = [[MKPolylineRenderer alloc] initWithOverlay:overlay];
+    linerender.lineCap = kCGLineCapRound;
+    linerender.lineJoin = kCGLineJoinRound;
+    linerender.lineWidth = 5;
+    linerender.strokeColor = [UIColor blueColor];
+    
+    return linerender;
+}
 #pragma mark - tapgesture 
 
 - (void)mapviewTapped:(UITapGestureRecognizer*)gesture{
@@ -252,5 +263,89 @@
         [weakSelf.mapview showAnnotations:weakSelf.mapview.annotations animated:YES];
     }
      ];
+}
+
+#pragma mark -- navigation
+
+- (void)startNavigation{
+    
+    NSString *start = @"深圳市";
+    NSString *destination = @"广州市";
+    
+    __block MKMapItem *sourceItem;
+    
+    __block MKMapItem *destItem;
+    
+    __block MKPlacemark *startPlacemark;
+    __block MKPlacemark *destPlacemark;
+    
+    __weak typeof(self) weakself = self;
+    
+    [weakself.geocoder geocodeAddressString:start completionHandler:^(NSArray *placemarks, NSError *error) {
+        CLPlacemark *place = [placemarks firstObject];
+        startPlacemark = [[MKPlacemark alloc] initWithPlacemark:place];
+        
+        
+        
+        [weakself.geocoder geocodeAddressString:destination completionHandler:^(NSArray *placemarks, NSError *error) {
+            CLPlacemark *place = [placemarks firstObject];
+            destPlacemark = [[MKPlacemark alloc] initWithPlacemark:place];
+            
+            MKDirectionsRequest *directionrequest;
+            directionrequest = [[MKDirectionsRequest alloc] init];
+            
+            sourceItem = [[MKMapItem alloc] initWithPlacemark:startPlacemark];
+            destItem = [[MKMapItem alloc] initWithPlacemark:destPlacemark];
+            
+            directionrequest.source = sourceItem;
+            directionrequest.destination = destItem;
+            directionrequest.requestsAlternateRoutes = NO;
+            directionrequest.transportType = MKDirectionsTransportTypeAutomobile;
+            
+            MKDirections *directions = [[MKDirections alloc]  initWithRequest:directionrequest];
+            
+            [directions calculateDirectionsWithCompletionHandler:^(MKDirectionsResponse *response, NSError *error) {
+                
+                if (error) {
+                    NSLog(@"---%@---", [error localizedDescription]);
+                    return ;
+                }
+                MKRoute *route = [response.routes firstObject];
+                NSLog(@"%@", route.name);
+                NSLog(@"%lf", route.distance);
+                NSLog(@"%lf", route.expectedTravelTime);
+                NSLog(@"%lu", (unsigned long)route.transportType);
+                
+                [weakself.mapview addOverlay:route.polyline];
+            }];
+
+        }];
+        
+        
+        
+    }];
+//    dispatch_group_t group = dispatch_group_create();
+//    dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
+//        
+//        
+//    });
+    
+//    dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
+//        [weakself.geocoder geocodeAddressString:destination completionHandler:^(NSArray *placemarks, NSError *error) {
+//            CLPlacemark *place = [placemarks firstObject];
+//            destPlacemark = [[MKPlacemark alloc] initWithPlacemark:place];
+//        }];
+//        
+//    });
+    
+//    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+//        
+//        
+//    });
+    
+    
+    
+    
+    
 }
 @end
