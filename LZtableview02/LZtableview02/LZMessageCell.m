@@ -27,6 +27,7 @@
     
     if (cell == nil) {
         cell = [[LZMessageCell alloc] init];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         UIImageView *iconview = [[UIImageView alloc] init];
         UILabel *namelabel = [[UILabel alloc] init];
         namelabel.textColor = [UIColor blueColor];
@@ -91,7 +92,7 @@
     
     CGFloat textX = nameX;
     CGFloat textY = CGRectGetMaxY(nameFrame) + 10;
-    CGSize textsize = [msg.text boundingRectWithSize:CGSizeMake(300, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17]} context:nil].size;
+    CGSize textsize = [msg.text boundingRectWithSize:CGSizeMake(self.msg.viewwidth - 50 - 20, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17]} context:nil].size;
     
     CGRect textFrame = CGRectMake(textX, textY, textsize.width, textsize.height);
     

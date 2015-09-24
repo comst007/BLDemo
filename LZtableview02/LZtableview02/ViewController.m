@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "LZMessageCell.h"
-@interface ViewController ()
+@interface ViewController ()<UIAlertViewDelegate>
 
 @end
 
@@ -45,17 +45,49 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(editingStyle == UITableViewCellEditingStyleInsert){
+        [LZMessage addNewMessage];
+        NSIndexPath *newindexpath = [NSIndexPath indexPathForRow:[[LZMessage arrayOfMessage] count] - 1 inSection: indexPath.section];
+        
+        [self.tableView insertRowsAtIndexPaths:@[newindexpath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.tableView scrollToRowAtIndexPath:newindexpath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    }
+}
+
 #pragma mark - tableview delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     LZMessage *msg = [[LZMessage arrayOfMessage] objectAtIndex:indexPath.row];
     
-   
+    msg.viewwidth = tableView.bounds.size.width;
     
     return msg.height;
 }
 
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row % 2 == 0) {
+        return UITableViewCellEditingStyleDelete;
+    }
+    return UITableViewCellEditingStyleInsert;
+}
+
+- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    __weak typeof(self) weakself = self;
+    UITableViewRowAction *action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal title:@"comst" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"!!!!!!!" message:@"++++++++" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+//        [alert show];
+        [[LZMessage arrayOfMessage]  removeObjectAtIndex:indexPath.row];
+        [weakself.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
+    }];
+    action1.backgroundColor = [UIColor purpleColor];
+    return @[action1];
+}
 
 #pragma mark -  btnclick
 
@@ -67,5 +99,11 @@
     }else{
         buttonitem.title = @"edit";
     }
+}
+
+#pragma mark = alertview delegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"%s", __func__);
 }
 @end

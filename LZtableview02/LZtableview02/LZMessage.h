@@ -14,8 +14,13 @@
 @property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) LZUserAccount *user;
 @property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign) CGFloat viewwidth;
 
 + (LZMessage *)messageWithSender:(LZUserAccount *)aSender text:(NSString *)aText sendDate:(NSDate *)aDate;
 
 + (NSMutableArray *)arrayOfMessage;
+
++ (void)addNewMessage;
+
+- (void)caculateHeight:(CGFloat)viewWidth;
 @end

@@ -18,12 +18,17 @@
     msg.text = aText;
     msg.date = aDate;
     
-    [msg caculateHeight];
+    //[msg caculateHeight];
     
     return msg;
 }
 
-- (void)caculateHeight{
+- (void)setViewwidth:(CGFloat)viewwidth{
+    _viewwidth = viewwidth;
+    [self caculateHeight:viewwidth];
+}
+
+- (void)caculateHeight:(CGFloat)viewWidth{
     CGFloat leftMargin = 10;
     CGFloat topMargin = 10;
     
@@ -43,7 +48,7 @@
     
     CGFloat textX = nameX;
     CGFloat textY = CGRectGetMaxY(nameFrame) + 10;
-    CGSize textsize = [self.text boundingRectWithSize:CGSizeMake(300, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17]} context:nil].size;
+    CGSize textsize = [self.text boundingRectWithSize:CGSizeMake(viewWidth - 50 - 20, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17]} context:nil].size;
     
     CGRect textFrame = CGRectMake(textX, textY, textsize.width, textsize.height);
     
@@ -126,6 +131,20 @@
 
     
     return _messageArray;
+}
+
+//Napster；24岁的时候，他是Facebook的创始人兼总裁；30岁的时候，他是一个喜欢参加派对，却不善应对媒体的社交网络奇才，一个成长中的亿万富翁。并且，他将会变得非常有名——由贾斯汀·丁伯莱克扮演的帕克，将出现在大卫·芬奇的新片《社交网络》中
++ (void)addNewMessage{
+    
+    [[self arrayOfMessage] addObject:[LZMessage messageWithSender:[LZUserAccount userWithName:@"肖恩帕克"
+                                                                        headImagePath:[[NSBundle mainBundle]
+                                                                                       pathForResource:@"headImage5"
+                                                                                       ofType:@"png"]
+                                                                        lifePhotoPath:[[NSBundle mainBundle]
+                                                                                       pathForResource:@"zhen"
+                                                                                       ofType:@"png"]]
+                                                     text:@"Napster；24岁的时候，他是Facebook的创始人兼总裁；30岁的时候，他是一个喜欢参加派对，却不善应对媒体的社交网络奇才，一个成长中的亿万富翁。并且，他将会变得非常有名——由贾斯汀·丁伯莱克扮演的帕克，将出现在大卫·芬奇的新片《社交网络》中。"
+                                                 sendDate:[NSDate date]]];
 }
 @end
 
