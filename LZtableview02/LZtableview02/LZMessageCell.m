@@ -8,8 +8,9 @@
 
 #import "LZMessageCell.h"
 
-@interface LZMessageCell ()
+@interface LZMessageCell ()<UIAlertViewDelegate>
 @property (nonatomic, strong) UIImageView *iconview;
+@property (nonatomic, strong) UIButton *imgbutton;
 @property (nonatomic, strong) UILabel *namelabel;
 @property (nonatomic, strong) UILabel *textlabel;
 @property (nonatomic, strong) UILabel *datelabel;
@@ -28,7 +29,13 @@
     if (cell == nil) {
         cell = [[LZMessageCell alloc] init];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         UIImageView *iconview = [[UIImageView alloc] init];
+        iconview.userInteractionEnabled = YES;
+        
+        UIButton *imgbutton = [[UIButton alloc] init];
+        [imgbutton addTarget:cell action:@selector(btnclick:) forControlEvents:UIControlEventTouchDown];
+        
         UILabel *namelabel = [[UILabel alloc] init];
         namelabel.textColor = [UIColor blueColor];
         UILabel *textlabel = [[UILabel alloc] init];
@@ -39,15 +46,17 @@
         
         datelabel.textColor = [UIColor colorWithRed:0.6 green:0.7 blue:0.9 alpha:1];
         
-        [cell.contentView addSubview:iconview];
+        [cell.contentView addSubview:imgbutton];
         [cell.contentView addSubview:namelabel];
         [cell.contentView addSubview:textlabel];
         [cell.contentView addSubview:datelabel];
         
         cell.namelabel = namelabel;
-        cell.iconview = iconview;
+        //cell.iconview = iconview;
         cell.textlabel = textlabel;
         cell.datelabel = datelabel;
+        
+        cell.imgbutton = imgbutton;
         
         
         
@@ -59,7 +68,8 @@
 - (void)setMsg:(LZMessage *)msg{
     _msg = msg;
     self.namelabel.text = msg.user.name;
-    self.iconview.image = [[UIImage alloc] initWithContentsOfFile:msg.user.iconPath];
+    [self.imgbutton setImage:[[UIImage alloc] initWithContentsOfFile:msg.user.iconPath] forState:UIControlStateNormal];
+    
     self.textlabel.text = msg.text;
     
     NSDateFormatter *formater = [[NSDateFormatter alloc] init];
@@ -79,7 +89,7 @@
     CGFloat iconW = 50;
     CGFloat iconH = 50;
     CGRect iconFrame = CGRectMake(leftMargin, topMargin, iconW, iconH);
-    self.iconview.frame = iconFrame;
+    self.imgbutton.frame = iconFrame;
     
     //name frame
     CGFloat nameX = CGRectGetMaxX(iconFrame) + 5;
@@ -108,6 +118,21 @@
     CGRect dateFrame = CGRectMake(dateX, dateY, dateW, dateH);
     
     self.datelabel.frame = dateFrame;
+    
+}
+
+- (void)btnclick:(UIButton *)btn{
+    
+    if (self.Msgdelegate && [self.Msgdelegate respondsToSelector:@selector(messagecell:didClickUserIcon:)]) {
+        [self.Msgdelegate messagecell:self didClickUserIcon:self.msg.user];
+    }
+    
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"btn click" message:self.msg.user.lifephotoPath delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//    
+//    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
 }
 @end

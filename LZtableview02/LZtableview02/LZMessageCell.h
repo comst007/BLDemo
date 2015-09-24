@@ -8,9 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import "LZMessage.h"
+
+@class LZMessageCell;
+
+@protocol MessageCellDelegate <NSObject>
+
+- (void)messagecell:(LZMessageCell *)cell didClickUserIcon:(LZUserAccount*)useraccount;
+
+@end
+
+
 @interface LZMessageCell : UITableViewCell
 
 @property (nonatomic, strong) LZMessage *msg;
+
+@property (nonatomic, weak) id<MessageCellDelegate>  Msgdelegate;
 
 + (instancetype)messageCellWithTableview:(UITableView *)tableview;
 

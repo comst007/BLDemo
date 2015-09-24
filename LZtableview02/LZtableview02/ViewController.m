@@ -8,7 +8,8 @@
 
 #import "ViewController.h"
 #import "LZMessageCell.h"
-@interface ViewController ()<UIAlertViewDelegate>
+#import "LZDetailViewController.h"
+@interface ViewController ()<UIAlertViewDelegate, MessageCellDelegate>
 
 @end
 
@@ -41,7 +42,7 @@
     LZMessage *msg = [[LZMessage arrayOfMessage] objectAtIndex:indexPath.row];
     
     cell.msg = msg;
-    
+    cell.Msgdelegate = self;
     return cell;
 }
 
@@ -105,5 +106,14 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     NSLog(@"%s", __func__);
+}
+
+#pragma mark - cell delegate
+
+- (void)messagecell:(LZMessageCell *)cell didClickUserIcon:(LZUserAccount *)useraccount{
+    LZDetailViewController *dvc = [[LZDetailViewController alloc] init];
+    dvc.useraccount = useraccount;
+    
+    [self.navigationController pushViewController:dvc animated:YES];
 }
 @end

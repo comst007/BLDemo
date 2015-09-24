@@ -27,6 +27,7 @@
 		CBAC7C801BB202E600430342 /* LZtableview02Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAC7C7F1BB202E600430342 /* LZtableview02Tests.m */; };
 		CBAC7C8B1BB2060100430342 /* LZUserAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAC7C8A1BB2060100430342 /* LZUserAccount.m */; };
 		CBAC7C8E1BB2079600430342 /* LZMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAC7C8D1BB2079600430342 /* LZMessage.m */; };
+		CBC613B61BB4490800C7F222 /* LZDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC613B51BB4490800C7F222 /* LZDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		CBAC7C8A1BB2060100430342 /* LZUserAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZUserAccount.m; sourceTree = "<group>"; };
 		CBAC7C8C1BB2079600430342 /* LZMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMessage.h; sourceTree = "<group>"; };
 		CBAC7C8D1BB2079600430342 /* LZMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMessage.m; sourceTree = "<group>"; };
+		CBC613B41BB4490800C7F222 /* LZDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LZDetailViewController.h; path = images/LZDetailViewController.h; sourceTree = "<group>"; };
+		CBC613B51BB4490800C7F222 /* LZDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LZDetailViewController.m; path = images/LZDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 		CBAC7C621BB202E600430342 /* LZtableview02 */ = {
 			isa = PBXGroup;
 			children = (
+				CBC613B41BB4490800C7F222 /* LZDetailViewController.h */,
+				CBC613B51BB4490800C7F222 /* LZDetailViewController.m */,
 				CB9482351BB2A6C10038FD23 /* images */,
 				CBAC7C671BB202E600430342 /* AppDelegate.h */,
 				CBAC7C681BB202E600430342 /* AppDelegate.m */,
@@ -289,6 +294,7 @@
 				CBAC7C6C1BB202E600430342 /* ViewController.m in Sources */,
 				CB94824C1BB2B51A0038FD23 /* LZMessageCell.m in Sources */,
 				CBAC7C691BB202E600430342 /* AppDelegate.m in Sources */,
+				CBC613B61BB4490800C7F222 /* LZDetailViewController.m in Sources */,
 				CBAC7C661BB202E600430342 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
