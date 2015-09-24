@@ -7,27 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB9482401BB2A6C10038FD23 /* cheng.png in Resources */ = {isa = PBXBuildFile; fileRef = CB9482361BB2A6C10038FD23 /* cheng.png */; };
-		CB9482411BB2A6C10038FD23 /* headImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = CB9482371BB2A6C10038FD23 /* headImage1.png */; };
-		CB9482421BB2A6C10038FD23 /* headImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB9482381BB2A6C10038FD23 /* headImage2.png */; };
-		CB9482431BB2A6C10038FD23 /* headImage3.png in Resources */ = {isa = PBXBuildFile; fileRef = CB9482391BB2A6C10038FD23 /* headImage3.png */; };
-		CB9482441BB2A6C10038FD23 /* headImage4.png in Resources */ = {isa = PBXBuildFile; fileRef = CB94823A1BB2A6C10038FD23 /* headImage4.png */; };
-		CB9482451BB2A6C10038FD23 /* headImage5.png in Resources */ = {isa = PBXBuildFile; fileRef = CB94823B1BB2A6C10038FD23 /* headImage5.png */; };
-		CB9482461BB2A6C10038FD23 /* jobs.png in Resources */ = {isa = PBXBuildFile; fileRef = CB94823C1BB2A6C10038FD23 /* jobs.png */; };
-		CB9482471BB2A6C10038FD23 /* li.png in Resources */ = {isa = PBXBuildFile; fileRef = CB94823D1BB2A6C10038FD23 /* li.png */; };
-		CB9482481BB2A6C10038FD23 /* zhao.png in Resources */ = {isa = PBXBuildFile; fileRef = CB94823E1BB2A6C10038FD23 /* zhao.png */; };
-		CB9482491BB2A6C10038FD23 /* zhen.png in Resources */ = {isa = PBXBuildFile; fileRef = CB94823F1BB2A6C10038FD23 /* zhen.png */; };
 		CB94824C1BB2B51A0038FD23 /* LZMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB94824B1BB2B51A0038FD23 /* LZMessageCell.m */; };
 		CBAC7C661BB202E600430342 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAC7C651BB202E600430342 /* main.m */; };
 		CBAC7C691BB202E600430342 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAC7C681BB202E600430342 /* AppDelegate.m */; };
 		CBAC7C6C1BB202E600430342 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAC7C6B1BB202E600430342 /* ViewController.m */; };
-		CBAC7C6F1BB202E600430342 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBAC7C6D1BB202E600430342 /* Main.storyboard */; };
-		CBAC7C711BB202E600430342 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBAC7C701BB202E600430342 /* Images.xcassets */; };
-		CBAC7C741BB202E600430342 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBAC7C721BB202E600430342 /* LaunchScreen.xib */; };
 		CBAC7C801BB202E600430342 /* LZtableview02Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAC7C7F1BB202E600430342 /* LZtableview02Tests.m */; };
 		CBAC7C8B1BB2060100430342 /* LZUserAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAC7C8A1BB2060100430342 /* LZUserAccount.m */; };
 		CBAC7C8E1BB2079600430342 /* LZMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAC7C8D1BB2079600430342 /* LZMessage.m */; };
 		CBC613B61BB4490800C7F222 /* LZDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC613B51BB4490800C7F222 /* LZDetailViewController.m */; };
+		CBC613B81BB47CDB00C7F222 /* cheng.png in Resources */ = {isa = PBXBuildFile; fileRef = CB9482361BB2A6C10038FD23 /* cheng.png */; };
+		CBC613B91BB47CDB00C7F222 /* headImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = CB9482371BB2A6C10038FD23 /* headImage1.png */; };
+		CBC613BA1BB47CDB00C7F222 /* headImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB9482381BB2A6C10038FD23 /* headImage2.png */; };
+		CBC613BB1BB47CDB00C7F222 /* headImage3.png in Resources */ = {isa = PBXBuildFile; fileRef = CB9482391BB2A6C10038FD23 /* headImage3.png */; };
+		CBC613BC1BB47CDB00C7F222 /* headImage4.png in Resources */ = {isa = PBXBuildFile; fileRef = CB94823A1BB2A6C10038FD23 /* headImage4.png */; };
+		CBC613BD1BB47CDB00C7F222 /* headImage5.png in Resources */ = {isa = PBXBuildFile; fileRef = CB94823B1BB2A6C10038FD23 /* headImage5.png */; };
+		CBC613BE1BB47CDB00C7F222 /* jobs.png in Resources */ = {isa = PBXBuildFile; fileRef = CB94823C1BB2A6C10038FD23 /* jobs.png */; };
+		CBC613BF1BB47CDB00C7F222 /* li.png in Resources */ = {isa = PBXBuildFile; fileRef = CB94823D1BB2A6C10038FD23 /* li.png */; };
+		CBC613C01BB47CDB00C7F222 /* zhao.png in Resources */ = {isa = PBXBuildFile; fileRef = CB94823E1BB2A6C10038FD23 /* zhao.png */; };
+		CBC613C11BB47CDB00C7F222 /* zhen.png in Resources */ = {isa = PBXBuildFile; fileRef = CB94823F1BB2A6C10038FD23 /* zhen.png */; };
+		CBC613C21BB47CF900C7F222 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBAC7C701BB202E600430342 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,19 +257,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBAC7C6F1BB202E600430342 /* Main.storyboard in Resources */,
-				CB9482461BB2A6C10038FD23 /* jobs.png in Resources */,
-				CB9482401BB2A6C10038FD23 /* cheng.png in Resources */,
-				CB9482441BB2A6C10038FD23 /* headImage4.png in Resources */,
-				CB9482491BB2A6C10038FD23 /* zhen.png in Resources */,
-				CB9482471BB2A6C10038FD23 /* li.png in Resources */,
-				CB9482481BB2A6C10038FD23 /* zhao.png in Resources */,
-				CBAC7C741BB202E600430342 /* LaunchScreen.xib in Resources */,
-				CB9482411BB2A6C10038FD23 /* headImage1.png in Resources */,
-				CB9482421BB2A6C10038FD23 /* headImage2.png in Resources */,
-				CBAC7C711BB202E600430342 /* Images.xcassets in Resources */,
-				CB9482451BB2A6C10038FD23 /* headImage5.png in Resources */,
-				CB9482431BB2A6C10038FD23 /* headImage3.png in Resources */,
+				CBC613C21BB47CF900C7F222 /* Images.xcassets in Resources */,
+				CBC613B81BB47CDB00C7F222 /* cheng.png in Resources */,
+				CBC613B91BB47CDB00C7F222 /* headImage1.png in Resources */,
+				CBC613BA1BB47CDB00C7F222 /* headImage2.png in Resources */,
+				CBC613BB1BB47CDB00C7F222 /* headImage3.png in Resources */,
+				CBC613BC1BB47CDB00C7F222 /* headImage4.png in Resources */,
+				CBC613BD1BB47CDB00C7F222 /* headImage5.png in Resources */,
+				CBC613BE1BB47CDB00C7F222 /* jobs.png in Resources */,
+				CBC613BF1BB47CDB00C7F222 /* li.png in Resources */,
+				CBC613C01BB47CDB00C7F222 /* zhao.png in Resources */,
+				CBC613C11BB47CDB00C7F222 /* zhen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
