@@ -13,5 +13,9 @@
 @property (nonatomic, copy) NSString *iconPath;
 @property (nonatomic, copy) NSString *lifephotoPath;
 
-+ (instancetype)useraccountWithName:(NSString *)name andIconPath:(NSString *)iconpath andLifephotoPath:(NSString *)lifephotoPath;
+
+
++ (instancetype)userWithName:(NSString *)aName
+           headImagePath:(NSString *)aHeadImagePath
+           lifePhotoPath:(NSString *)aLifePhotoPath;
 @end

@@ -15,7 +15,7 @@
 @property (nonatomic, strong) LZUserAccount *user;
 @property (nonatomic, assign) CGFloat height;
 
-+ (instancetype)messageWithUser:(LZUserAccount *)sender andText:(NSString *)text andDate:(NSDate *)date;
++ (LZMessage *)messageWithSender:(LZUserAccount *)aSender text:(NSString *)aText sendDate:(NSDate *)aDate;
 
 + (NSMutableArray *)arrayOfMessage;
 @end

@@ -10,14 +10,16 @@
 
 @implementation LZUserAccount
 
-+ (instancetype)useraccountWithName:(NSString *)name andIconPath:(NSString *)iconpath andLifephotoPath:(NSString *)lifephotoPath{
++ (instancetype)userWithName:(NSString *)aName
+               headImagePath:(NSString *)aHeadImagePath
+               lifePhotoPath:(NSString *)aLifePhotoPath{
     
     LZUserAccount *useraccount ;
     
     useraccount = [[LZUserAccount alloc] init];
-    useraccount.name = name;
-    useraccount.iconPath = iconpath;
-    useraccount.lifephotoPath = lifephotoPath;
+    useraccount.name = aName;
+    useraccount.iconPath = aHeadImagePath;
+    useraccount.lifephotoPath = aLifePhotoPath;
     
     return useraccount;
     

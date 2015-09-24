@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB9482401BB2A6C10038FD23 /* cheng.png in Resources */ = {isa = PBXBuildFile; fileRef = CB9482361BB2A6C10038FD23 /* cheng.png */; };
+		CB9482411BB2A6C10038FD23 /* headImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = CB9482371BB2A6C10038FD23 /* headImage1.png */; };
+		CB9482421BB2A6C10038FD23 /* headImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB9482381BB2A6C10038FD23 /* headImage2.png */; };
+		CB9482431BB2A6C10038FD23 /* headImage3.png in Resources */ = {isa = PBXBuildFile; fileRef = CB9482391BB2A6C10038FD23 /* headImage3.png */; };
+		CB9482441BB2A6C10038FD23 /* headImage4.png in Resources */ = {isa = PBXBuildFile; fileRef = CB94823A1BB2A6C10038FD23 /* headImage4.png */; };
+		CB9482451BB2A6C10038FD23 /* headImage5.png in Resources */ = {isa = PBXBuildFile; fileRef = CB94823B1BB2A6C10038FD23 /* headImage5.png */; };
+		CB9482461BB2A6C10038FD23 /* jobs.png in Resources */ = {isa = PBXBuildFile; fileRef = CB94823C1BB2A6C10038FD23 /* jobs.png */; };
+		CB9482471BB2A6C10038FD23 /* li.png in Resources */ = {isa = PBXBuildFile; fileRef = CB94823D1BB2A6C10038FD23 /* li.png */; };
+		CB9482481BB2A6C10038FD23 /* zhao.png in Resources */ = {isa = PBXBuildFile; fileRef = CB94823E1BB2A6C10038FD23 /* zhao.png */; };
+		CB9482491BB2A6C10038FD23 /* zhen.png in Resources */ = {isa = PBXBuildFile; fileRef = CB94823F1BB2A6C10038FD23 /* zhen.png */; };
+		CB94824C1BB2B51A0038FD23 /* LZMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CB94824B1BB2B51A0038FD23 /* LZMessageCell.m */; };
 		CBAC7C661BB202E600430342 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAC7C651BB202E600430342 /* main.m */; };
 		CBAC7C691BB202E600430342 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAC7C681BB202E600430342 /* AppDelegate.m */; };
 		CBAC7C6C1BB202E600430342 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAC7C6B1BB202E600430342 /* ViewController.m */; };
@@ -29,6 +40,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB9482361BB2A6C10038FD23 /* cheng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cheng.png; sourceTree = "<group>"; };
+		CB9482371BB2A6C10038FD23 /* headImage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headImage1.png; sourceTree = "<group>"; };
+		CB9482381BB2A6C10038FD23 /* headImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headImage2.png; sourceTree = "<group>"; };
+		CB9482391BB2A6C10038FD23 /* headImage3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headImage3.png; sourceTree = "<group>"; };
+		CB94823A1BB2A6C10038FD23 /* headImage4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headImage4.png; sourceTree = "<group>"; };
+		CB94823B1BB2A6C10038FD23 /* headImage5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = headImage5.png; sourceTree = "<group>"; };
+		CB94823C1BB2A6C10038FD23 /* jobs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jobs.png; sourceTree = "<group>"; };
+		CB94823D1BB2A6C10038FD23 /* li.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = li.png; sourceTree = "<group>"; };
+		CB94823E1BB2A6C10038FD23 /* zhao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhao.png; sourceTree = "<group>"; };
+		CB94823F1BB2A6C10038FD23 /* zhen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhen.png; sourceTree = "<group>"; };
+		CB94824A1BB2B51A0038FD23 /* LZMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMessageCell.h; sourceTree = "<group>"; };
+		CB94824B1BB2B51A0038FD23 /* LZMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMessageCell.m; sourceTree = "<group>"; };
+		CB94824D1BB2C00A0038FD23 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 		CBAC7C601BB202E600430342 /* LZtableview02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZtableview02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBAC7C641BB202E600430342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBAC7C651BB202E600430342 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,9 +90,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB9482351BB2A6C10038FD23 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				CB9482361BB2A6C10038FD23 /* cheng.png */,
+				CB9482371BB2A6C10038FD23 /* headImage1.png */,
+				CB9482381BB2A6C10038FD23 /* headImage2.png */,
+				CB9482391BB2A6C10038FD23 /* headImage3.png */,
+				CB94823A1BB2A6C10038FD23 /* headImage4.png */,
+				CB94823B1BB2A6C10038FD23 /* headImage5.png */,
+				CB94823C1BB2A6C10038FD23 /* jobs.png */,
+				CB94823D1BB2A6C10038FD23 /* li.png */,
+				CB94823E1BB2A6C10038FD23 /* zhao.png */,
+				CB94823F1BB2A6C10038FD23 /* zhen.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		CBAC7C571BB202E600430342 = {
 			isa = PBXGroup;
 			children = (
+				CB94824D1BB2C00A0038FD23 /* Reveal.framework */,
 				CBAC7C621BB202E600430342 /* LZtableview02 */,
 				CBAC7C7C1BB202E600430342 /* LZtableview02Tests */,
 				CBAC7C611BB202E600430342 /* Products */,
@@ -87,6 +129,7 @@
 		CBAC7C621BB202E600430342 /* LZtableview02 */ = {
 			isa = PBXGroup;
 			children = (
+				CB9482351BB2A6C10038FD23 /* images */,
 				CBAC7C671BB202E600430342 /* AppDelegate.h */,
 				CBAC7C681BB202E600430342 /* AppDelegate.m */,
 				CBAC7C6A1BB202E600430342 /* ViewController.h */,
@@ -95,6 +138,8 @@
 				CBAC7C891BB2060100430342 /* LZUserAccount.h */,
 				CBAC7C8A1BB2060100430342 /* LZUserAccount.m */,
 				CBAC7C8C1BB2079600430342 /* LZMessage.h */,
+				CB94824A1BB2B51A0038FD23 /* LZMessageCell.h */,
+				CB94824B1BB2B51A0038FD23 /* LZMessageCell.m */,
 				CBAC7C8D1BB2079600430342 /* LZMessage.m */,
 				CBAC7C701BB202E600430342 /* Images.xcassets */,
 				CBAC7C721BB202E600430342 /* LaunchScreen.xib */,
@@ -210,8 +255,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBAC7C6F1BB202E600430342 /* Main.storyboard in Resources */,
+				CB9482461BB2A6C10038FD23 /* jobs.png in Resources */,
+				CB9482401BB2A6C10038FD23 /* cheng.png in Resources */,
+				CB9482441BB2A6C10038FD23 /* headImage4.png in Resources */,
+				CB9482491BB2A6C10038FD23 /* zhen.png in Resources */,
+				CB9482471BB2A6C10038FD23 /* li.png in Resources */,
+				CB9482481BB2A6C10038FD23 /* zhao.png in Resources */,
 				CBAC7C741BB202E600430342 /* LaunchScreen.xib in Resources */,
+				CB9482411BB2A6C10038FD23 /* headImage1.png in Resources */,
+				CB9482421BB2A6C10038FD23 /* headImage2.png in Resources */,
 				CBAC7C711BB202E600430342 /* Images.xcassets in Resources */,
+				CB9482451BB2A6C10038FD23 /* headImage5.png in Resources */,
+				CB9482431BB2A6C10038FD23 /* headImage3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +287,7 @@
 				CBAC7C8E1BB2079600430342 /* LZMessage.m in Sources */,
 				CBAC7C8B1BB2060100430342 /* LZUserAccount.m in Sources */,
 				CBAC7C6C1BB202E600430342 /* ViewController.m in Sources */,
+				CB94824C1BB2B51A0038FD23 /* LZMessageCell.m in Sources */,
 				CBAC7C691BB202E600430342 /* AppDelegate.m in Sources */,
 				CBAC7C661BB202E600430342 /* main.m in Sources */,
 			);
@@ -359,8 +415,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LZtableview02/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -369,6 +435,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LZtableview02/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -428,6 +498,7 @@
 				CBAC7C851BB202E600430342 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBAC7C861BB202E600430342 /* Build configuration list for PBXNativeTarget "LZtableview02Tests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +507,7 @@
 				CBAC7C881BB202E600430342 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
