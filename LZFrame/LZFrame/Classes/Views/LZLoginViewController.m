@@ -8,6 +8,8 @@
 
 #import "LZLoginViewController.h"
 #import "AppDelegate.h"
+#import "LZLoginRequest.h"
+#import "LZGlobal.h"
 @interface LZLoginViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextfield;
 @property (weak, nonatomic) IBOutlet UITextField *userpasswordTextfield;
@@ -33,13 +35,28 @@
     if ([self.usernameTextfield.text length] == 0 || [self.userpasswordTextfield.text length] == 0) {
         return;
     }
-    [UIView animateWithDuration:1 animations:^{
-        self.view.alpha = 0.3;
-    } completion:^(BOOL finished) {
+    LZLoginRequest *loginRequest = [[LZLoginRequest alloc] init];
+    
+    [loginRequest sendLoginRequestWithName:self.usernameTextfield.text password:self.userpasswordTextfield.text completeblock:^(LZUserInfo *user, NSError *error) {
         
-        AppDelegate *appDel =  [UIApplication sharedApplication].delegate ;
-        
-        [appDel loadUserInfo];
+        if (!error) {
+            
+            [LZGlobal sharedglobal].userinfo = user;
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                
+                [UIView animateWithDuration:1 animations:^{
+                    self.view.alpha = 0.3;
+                } completion:^(BOOL finished) {
+                    
+                    AppDelegate *appDel =  [UIApplication sharedApplication].delegate ;
+                    
+                    [appDel loadUserInfo];
+                    
+                }];
+                
+                
+            }];
+        }
         
     }];
 }

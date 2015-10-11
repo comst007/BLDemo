@@ -17,6 +17,8 @@
 		CB4FA5071BCA5A7B0002F8C3 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = CB4FA5061BCA5A7B0002F8C3 /* login.json */; };
 		CB4FA5091BCA679E0002F8C3 /* login.xml in Resources */ = {isa = PBXBuildFile; fileRef = CB4FA5081BCA679E0002F8C3 /* login.xml */; };
 		CB4FA50C1BCAEA7D0002F8C3 /* LZLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4FA50B1BCAEA7D0002F8C3 /* LZLoginRequest.m */; };
+		CB4FA50F1BCAF2310002F8C3 /* LZGlobal.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4FA50E1BCAF2310002F8C3 /* LZGlobal.m */; };
+		CBBF40171BCB012A0028D574 /* LZLoadIconRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CBBF40161BCB012A0028D574 /* LZLoadIconRequest.m */; };
 		CBC613EC1BB48B1A00C7F222 /* LZFrameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC613EB1BB48B1A00C7F222 /* LZFrameTests.m */; };
 		CBC6140E1BB48C6900C7F222 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC613F81BB48C6900C7F222 /* AppDelegate.m */; };
 		CBC6140F1BB48C6900C7F222 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC613FB1BB48C6900C7F222 /* ViewController.m */; };
@@ -54,6 +56,10 @@
 		CB4FA5081BCA679E0002F8C3 /* login.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = login.xml; sourceTree = "<group>"; };
 		CB4FA50A1BCAEA7D0002F8C3 /* LZLoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLoginRequest.h; sourceTree = "<group>"; };
 		CB4FA50B1BCAEA7D0002F8C3 /* LZLoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLoginRequest.m; sourceTree = "<group>"; };
+		CB4FA50D1BCAF2310002F8C3 /* LZGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZGlobal.h; sourceTree = "<group>"; };
+		CB4FA50E1BCAF2310002F8C3 /* LZGlobal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZGlobal.m; sourceTree = "<group>"; };
+		CBBF40151BCB012A0028D574 /* LZLoadIconRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLoadIconRequest.h; sourceTree = "<group>"; };
+		CBBF40161BCB012A0028D574 /* LZLoadIconRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLoadIconRequest.m; sourceTree = "<group>"; };
 		CBC613CC1BB48B1A00C7F222 /* LZFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC613E51BB48B1A00C7F222 /* LZFrameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZFrameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC613EA1BB48B1A00C7F222 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -173,6 +179,8 @@
 		CBC613FC1BB48C6900C7F222 /* Globals */ = {
 			isa = PBXGroup;
 			children = (
+				CB4FA50D1BCAF2310002F8C3 /* LZGlobal.h */,
+				CB4FA50E1BCAF2310002F8C3 /* LZGlobal.m */,
 			);
 			path = Globals;
 			sourceTree = "<group>";
@@ -209,6 +217,8 @@
 			children = (
 				CB4FA50A1BCAEA7D0002F8C3 /* LZLoginRequest.h */,
 				CB4FA50B1BCAEA7D0002F8C3 /* LZLoginRequest.m */,
+				CBBF40151BCB012A0028D574 /* LZLoadIconRequest.h */,
+				CBBF40161BCB012A0028D574 /* LZLoadIconRequest.m */,
 			);
 			path = Requrests;
 			sourceTree = "<group>";
@@ -375,10 +385,12 @@
 				CBC6140F1BB48C6900C7F222 /* ViewController.m in Sources */,
 				CB4FA50C1BCAEA7D0002F8C3 /* LZLoginRequest.m in Sources */,
 				CBC614141BB48C6900C7F222 /* main.m in Sources */,
+				CB4FA50F1BCAF2310002F8C3 /* LZGlobal.m in Sources */,
 				CB4FA4FF1BCA539A0002F8C3 /* LZAddress.m in Sources */,
 				CB4FA5051BCA575A0002F8C3 /* LZParser.m in Sources */,
 				CB4FA4F91BCA3E2A0002F8C3 /* LZUserinfoViewController.m in Sources */,
 				CB4FA4FC1BCA538C0002F8C3 /* LZUserInfo.m in Sources */,
+				CBBF40171BCB012A0028D574 /* LZLoadIconRequest.m in Sources */,
 				CBC6140E1BB48C6900C7F222 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

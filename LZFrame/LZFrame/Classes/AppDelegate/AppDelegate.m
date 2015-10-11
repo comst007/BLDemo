@@ -23,6 +23,7 @@
 - (void)loadUserInfo{
     UIStoryboard *userinfoSB = [UIStoryboard storyboardWithName:@"LZUserInfo" bundle:[NSBundle mainBundle]];
     UINavigationController *nvc = [userinfoSB instantiateViewControllerWithIdentifier:@"userInfoNav" ];
+    self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = nvc;
     
 }

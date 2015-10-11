@@ -31,9 +31,88 @@
                     <view key="view" contentMode="scaleToFill" id="rgP-h5-RhY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.25098040699958801" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="izn-fg-Rea">
+                                <rect key="frame" x="250" y="72" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="N10-OL-oFx"/>
+                                    <constraint firstAttribute="height" constant="100" id="i8Z-nz-QjI"/>
+                                </constraints>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mf7-PO-GFg">
+                                <rect key="frame" x="250" y="180" width="100" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="SUU-0B-WVp"/>
+                                    <constraint firstAttribute="width" constant="100" id="kvH-pp-xRS"/>
+                                </constraints>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQl-3S-fgF">
+                                <rect key="frame" x="195" y="263" width="211" height="74"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="211" id="eqr-ql-rXp"/>
+                                    <constraint firstAttribute="height" constant="74" id="qlt-2d-Y1s"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="svl-sZ-Vun">
+                                <rect key="frame" x="290" y="112" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="3r5-xL-OaD"/>
+                                    <constraint firstAttribute="height" constant="20" id="p9C-ce-7R1"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgR-Wf-hwT">
+                                <rect key="frame" x="250" y="190" width="100" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3zp-Ip-6xn"/>
+                                    <constraint firstAttribute="width" constant="100" id="agu-5I-JbD"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startDownload:" destination="mZE-HV-D55" eventType="touchUpInside" id="re8-qF-ok6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mf7-PO-GFg" firstAttribute="top" secondItem="izn-fg-Rea" secondAttribute="bottom" constant="8" id="7ZO-HD-zCb"/>
+                            <constraint firstAttribute="centerX" secondItem="mQl-3S-fgF" secondAttribute="centerX" id="8NZ-Qa-FOF"/>
+                            <constraint firstItem="mQl-3S-fgF" firstAttribute="top" secondItem="vgR-Wf-hwT" secondAttribute="bottom" constant="43" id="D9a-Ej-Lw7"/>
+                            <constraint firstItem="izn-fg-Rea" firstAttribute="centerX" secondItem="mQl-3S-fgF" secondAttribute="centerX" id="GvX-d2-a2Y"/>
+                            <constraint firstItem="mQl-3S-fgF" firstAttribute="top" secondItem="vgR-Wf-hwT" secondAttribute="bottom" constant="43" id="Kz5-5J-W39"/>
+                            <constraint firstItem="izn-fg-Rea" firstAttribute="top" secondItem="EaE-jl-2WQ" secondAttribute="bottom" constant="8" id="WCY-fc-9cw"/>
+                            <constraint firstItem="vgR-Wf-hwT" firstAttribute="top" secondItem="mf7-PO-GFg" secondAttribute="bottom" constant="8" id="YcJ-wn-L29"/>
+                            <constraint firstItem="izn-fg-Rea" firstAttribute="centerX" secondItem="svl-sZ-Vun" secondAttribute="centerX" id="aw6-fc-6tJ"/>
+                            <constraint firstAttribute="centerY" secondItem="mQl-3S-fgF" secondAttribute="centerY" id="eBn-5F-9m9"/>
+                            <constraint firstItem="vgR-Wf-hwT" firstAttribute="top" secondItem="mf7-PO-GFg" secondAttribute="bottom" constant="8" id="eFX-mM-Gfs"/>
+                            <constraint firstItem="izn-fg-Rea" firstAttribute="centerX" secondItem="vgR-Wf-hwT" secondAttribute="centerX" id="fj3-db-Ezy"/>
+                            <constraint firstItem="izn-fg-Rea" firstAttribute="centerY" secondItem="svl-sZ-Vun" secondAttribute="centerY" id="jzd-Tv-py0"/>
+                            <constraint firstItem="izn-fg-Rea" firstAttribute="centerX" secondItem="mf7-PO-GFg" secondAttribute="centerX" id="rVl-jZ-nAb"/>
+                            <constraint firstItem="mf7-PO-GFg" firstAttribute="top" secondItem="izn-fg-Rea" secondAttribute="bottom" constant="8" id="rxp-4j-js1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="rxp-4j-js1"/>
+                                <exclude reference="eFX-mM-Gfs"/>
+                                <exclude reference="Kz5-5J-W39"/>
+                                <exclude reference="eBn-5F-9m9"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="0t5-Q0-1TN"/>
+                    <connections>
+                        <outlet property="detailLabel" destination="mQl-3S-fgF" id="j3M-ee-bMZ"/>
+                        <outlet property="downloadIndicator" destination="svl-sZ-Vun" id="Jmw-da-943"/>
+                        <outlet property="downloadProgressview" destination="mf7-PO-GFg" id="TOW-LL-IZz"/>
+                        <outlet property="headImageview" destination="izn-fg-Rea" id="eZT-SU-4CK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fu8-2o-VTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

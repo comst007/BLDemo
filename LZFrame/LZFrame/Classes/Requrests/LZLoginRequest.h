@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class LZUserInfo;
+typedef void (^loginRequestCompleteBlock)(LZUserInfo *user, NSError *error);
 @interface LZLoginRequest : NSObject
+
+- (void)sendLoginRequestWithName:(NSString *)username password:(NSString *)userpassword completeblock:(loginRequestCompleteBlock)completeHandle;
 
 @end
