@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="LZLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +15,55 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvB-eW-AUd">
+                                <rect key="frame" x="198" y="285" width="205" height="30"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KTa-RO-cEz"/>
+                                    <constraint firstAttribute="width" constant="205" id="Xv3-vJ-Kg9"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginbtnClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="c56-Xa-k1S"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="p86-ng-ZyY">
+                                <rect key="frame" x="198" y="160" width="205" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="JBv-Gk-CAx"/>
+                                    <constraint firstAttribute="height" constant="30" id="VRN-Ev-BDa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vGe-Hc-m5h">
+                                <rect key="frame" x="198" y="225" width="205" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="4Gt-NK-moL"/>
+                                    <constraint firstAttribute="height" constant="30" id="Gmu-rC-dUB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WvB-eW-AUd" firstAttribute="top" secondItem="vGe-Hc-m5h" secondAttribute="bottom" constant="30" id="1To-WT-BL3"/>
+                            <constraint firstAttribute="centerY" secondItem="WvB-eW-AUd" secondAttribute="centerY" id="Ayr-gg-78p"/>
+                            <constraint firstItem="p86-ng-ZyY" firstAttribute="centerX" secondItem="WvB-eW-AUd" secondAttribute="centerX" id="Rqh-ux-SAa"/>
+                            <constraint firstItem="vGe-Hc-m5h" firstAttribute="top" secondItem="p86-ng-ZyY" secondAttribute="bottom" constant="35" id="a3H-3H-NIB"/>
+                            <constraint firstItem="p86-ng-ZyY" firstAttribute="centerX" secondItem="vGe-Hc-m5h" secondAttribute="centerX" id="bdp-ud-IFb"/>
+                            <constraint firstAttribute="centerX" secondItem="WvB-eW-AUd" secondAttribute="centerX" id="zba-vv-9c5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="WvB-eW-AUd" id="dwc-jf-ZE9"/>
+                        <outlet property="usernameTextfield" destination="p86-ng-ZyY" id="Npu-Rl-H8H"/>
+                        <outlet property="userpasswordTextfield" destination="vGe-Hc-m5h" id="5S2-1C-2HT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

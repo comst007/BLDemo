@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-
+#import "LZParser.h"
 @interface LZFrameTests : XCTestCase
 
 @end
@@ -27,6 +27,11 @@
 
 - (void)testExample {
     // This is an example of a functional test case.
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"login.xml" ofType:nil];
+    NSData *JSONData = [[NSData alloc] initWithContentsOfFile:path];
+    LZParser *parser = [[LZParser alloc] init];
+    LZUserInfo *userinfo = [parser parseXML:JSONData];
+    
     XCTAssert(YES, @"Pass");
 }
 

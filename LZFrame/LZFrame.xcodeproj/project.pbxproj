@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB4FA4F41BCA3A900002F8C3 /* LZLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4FA4F31BCA3A900002F8C3 /* LZLoginViewController.m */; };
+		CB4FA4F61BCA3DA50002F8C3 /* LZUserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB4FA4F51BCA3DA50002F8C3 /* LZUserInfo.storyboard */; };
+		CB4FA4F91BCA3E2A0002F8C3 /* LZUserinfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4FA4F81BCA3E2A0002F8C3 /* LZUserinfoViewController.m */; };
+		CB4FA4FC1BCA538C0002F8C3 /* LZUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4FA4FB1BCA538C0002F8C3 /* LZUserInfo.m */; };
+		CB4FA4FF1BCA539A0002F8C3 /* LZAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4FA4FE1BCA539A0002F8C3 /* LZAddress.m */; };
+		CB4FA5021BCA56A40002F8C3 /* BLMultipartForm.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4FA5011BCA56A40002F8C3 /* BLMultipartForm.m */; };
+		CB4FA5051BCA575A0002F8C3 /* LZParser.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4FA5041BCA575A0002F8C3 /* LZParser.m */; };
+		CB4FA5071BCA5A7B0002F8C3 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = CB4FA5061BCA5A7B0002F8C3 /* login.json */; };
+		CB4FA5091BCA679E0002F8C3 /* login.xml in Resources */ = {isa = PBXBuildFile; fileRef = CB4FA5081BCA679E0002F8C3 /* login.xml */; };
+		CB4FA50C1BCAEA7D0002F8C3 /* LZLoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4FA50B1BCAEA7D0002F8C3 /* LZLoginRequest.m */; };
 		CBC613EC1BB48B1A00C7F222 /* LZFrameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC613EB1BB48B1A00C7F222 /* LZFrameTests.m */; };
 		CBC6140E1BB48C6900C7F222 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC613F81BB48C6900C7F222 /* AppDelegate.m */; };
 		CBC6140F1BB48C6900C7F222 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC613FB1BB48C6900C7F222 /* ViewController.m */; };
@@ -27,6 +37,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB4FA4F21BCA3A900002F8C3 /* LZLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LZLoginViewController.h; path = ../Views/LZLoginViewController.h; sourceTree = "<group>"; };
+		CB4FA4F31BCA3A900002F8C3 /* LZLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LZLoginViewController.m; path = ../Views/LZLoginViewController.m; sourceTree = "<group>"; };
+		CB4FA4F51BCA3DA50002F8C3 /* LZUserInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LZUserInfo.storyboard; sourceTree = "<group>"; };
+		CB4FA4F71BCA3E2A0002F8C3 /* LZUserinfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LZUserinfoViewController.h; path = ../Views/LZUserinfoViewController.h; sourceTree = "<group>"; };
+		CB4FA4F81BCA3E2A0002F8C3 /* LZUserinfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LZUserinfoViewController.m; path = ../Views/LZUserinfoViewController.m; sourceTree = "<group>"; };
+		CB4FA4FA1BCA538C0002F8C3 /* LZUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZUserInfo.h; sourceTree = "<group>"; };
+		CB4FA4FB1BCA538C0002F8C3 /* LZUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZUserInfo.m; sourceTree = "<group>"; };
+		CB4FA4FD1BCA539A0002F8C3 /* LZAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAddress.h; sourceTree = "<group>"; };
+		CB4FA4FE1BCA539A0002F8C3 /* LZAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAddress.m; sourceTree = "<group>"; };
+		CB4FA5001BCA56A40002F8C3 /* BLMultipartForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLMultipartForm.h; sourceTree = "<group>"; };
+		CB4FA5011BCA56A40002F8C3 /* BLMultipartForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLMultipartForm.m; sourceTree = "<group>"; };
+		CB4FA5031BCA575A0002F8C3 /* LZParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZParser.h; sourceTree = "<group>"; };
+		CB4FA5041BCA575A0002F8C3 /* LZParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZParser.m; sourceTree = "<group>"; };
+		CB4FA5061BCA5A7B0002F8C3 /* login.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
+		CB4FA5081BCA679E0002F8C3 /* login.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = login.xml; sourceTree = "<group>"; };
+		CB4FA50A1BCAEA7D0002F8C3 /* LZLoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZLoginRequest.h; sourceTree = "<group>"; };
+		CB4FA50B1BCAEA7D0002F8C3 /* LZLoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZLoginRequest.m; sourceTree = "<group>"; };
 		CBC613CC1BB48B1A00C7F222 /* LZFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC613E51BB48B1A00C7F222 /* LZFrameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZFrameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC613EA1BB48B1A00C7F222 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -133,6 +160,10 @@
 		CBC613F91BB48C6900C7F222 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CB4FA4F21BCA3A900002F8C3 /* LZLoginViewController.h */,
+				CB4FA4F31BCA3A900002F8C3 /* LZLoginViewController.m */,
+				CB4FA4F71BCA3E2A0002F8C3 /* LZUserinfoViewController.h */,
+				CB4FA4F81BCA3E2A0002F8C3 /* LZUserinfoViewController.m */,
 				CBC613FA1BB48C6900C7F222 /* ViewController.h */,
 				CBC613FB1BB48C6900C7F222 /* ViewController.m */,
 			);
@@ -149,6 +180,10 @@
 		CBC613FD1BB48C6900C7F222 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CB4FA4FA1BCA538C0002F8C3 /* LZUserInfo.h */,
+				CB4FA4FB1BCA538C0002F8C3 /* LZUserInfo.m */,
+				CB4FA4FD1BCA539A0002F8C3 /* LZAddress.h */,
+				CB4FA4FE1BCA539A0002F8C3 /* LZAddress.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -156,6 +191,8 @@
 		CBC613FE1BB48C6900C7F222 /* Parsers */ = {
 			isa = PBXGroup;
 			children = (
+				CB4FA5031BCA575A0002F8C3 /* LZParser.h */,
+				CB4FA5041BCA575A0002F8C3 /* LZParser.m */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -170,6 +207,8 @@
 		CBC614001BB48C6900C7F222 /* Requrests */ = {
 			isa = PBXGroup;
 			children = (
+				CB4FA50A1BCAEA7D0002F8C3 /* LZLoginRequest.h */,
+				CB4FA50B1BCAEA7D0002F8C3 /* LZLoginRequest.m */,
 			);
 			path = Requrests;
 			sourceTree = "<group>";
@@ -177,6 +216,8 @@
 		CBC614011BB48C6900C7F222 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				CB4FA5001BCA56A40002F8C3 /* BLMultipartForm.h */,
+				CB4FA5011BCA56A40002F8C3 /* BLMultipartForm.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -208,6 +249,8 @@
 		CBC614071BB48C6900C7F222 /* Surpportings */ = {
 			isa = PBXGroup;
 			children = (
+				CB4FA5081BCA679E0002F8C3 /* login.xml */,
+				CB4FA5061BCA5A7B0002F8C3 /* login.json */,
 				CBC6140C1BB48C6900C7F222 /* Info.plist */,
 				CBC6140D1BB48C6900C7F222 /* main.m */,
 			);
@@ -219,6 +262,7 @@
 			children = (
 				CBC614161BB48CCF00C7F222 /* LaunchScreen.xib */,
 				CBC614171BB48CCF00C7F222 /* Main.storyboard */,
+				CB4FA4F51BCA3DA50002F8C3 /* LZUserInfo.storyboard */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -304,6 +348,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC614181BB48CCF00C7F222 /* LaunchScreen.xib in Resources */,
+				CB4FA5091BCA679E0002F8C3 /* login.xml in Resources */,
+				CB4FA4F61BCA3DA50002F8C3 /* LZUserInfo.storyboard in Resources */,
+				CB4FA5071BCA5A7B0002F8C3 /* login.json in Resources */,
 				CBC614101BB48C6900C7F222 /* Images.xcassets in Resources */,
 				CBC614191BB48CCF00C7F222 /* Main.storyboard in Resources */,
 			);
@@ -323,8 +370,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB4FA5021BCA56A40002F8C3 /* BLMultipartForm.m in Sources */,
+				CB4FA4F41BCA3A900002F8C3 /* LZLoginViewController.m in Sources */,
 				CBC6140F1BB48C6900C7F222 /* ViewController.m in Sources */,
+				CB4FA50C1BCAEA7D0002F8C3 /* LZLoginRequest.m in Sources */,
 				CBC614141BB48C6900C7F222 /* main.m in Sources */,
+				CB4FA4FF1BCA539A0002F8C3 /* LZAddress.m in Sources */,
+				CB4FA5051BCA575A0002F8C3 /* LZParser.m in Sources */,
+				CB4FA4F91BCA3E2A0002F8C3 /* LZUserinfoViewController.m in Sources */,
+				CB4FA4FC1BCA538C0002F8C3 /* LZUserInfo.m in Sources */,
 				CBC6140E1BB48C6900C7F222 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +555,7 @@
 				CBC613F11BB48B1A00C7F222 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBC613F21BB48B1A00C7F222 /* Build configuration list for PBXNativeTarget "LZFrameTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +564,7 @@
 				CBC613F41BB48B1A00C7F222 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

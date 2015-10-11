@@ -7,16 +7,29 @@
 //
 
 #import "AppDelegate.h"
-
+#import "LZLoginViewController.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+- (void)loadLoginFrame{
+    UIStoryboard *LoginSB = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    LZLoginViewController *loginVc = [LoginSB instantiateInitialViewController];
+    self.window.rootViewController = loginVc;
+}
+
+- (void)loadUserInfo{
+    UIStoryboard *userinfoSB = [UIStoryboard storyboardWithName:@"LZUserInfo" bundle:[NSBundle mainBundle]];
+    UINavigationController *nvc = [userinfoSB instantiateViewControllerWithIdentifier:@"userInfoNav" ];
+    self.window.rootViewController = nvc;
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self loadLoginFrame];
     return YES;
 }
 
