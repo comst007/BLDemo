@@ -7,16 +7,31 @@
 //
 
 #import "AppDelegate.h"
-
+#import "LZUserloginViewController.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+- (void)loadUserinfoFrame{
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"UserInfo" bundle:[NSBundle mainBundle]];
+    UINavigationController *nvc = [sb instantiateViewControllerWithIdentifier:@"LZUserInfoNav"];
+    self.window.rootViewController = nvc;
+}
 
+- (void)loadUserLoginFrame{
+    
+    UIStoryboard *loginSB = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    LZUserloginViewController *loginVC = [loginSB instantiateViewControllerWithIdentifier:@"LZUserLogin"];
+    self.window.rootViewController = loginVC;
+    
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self loadUserLoginFrame];
+    self.window.backgroundColor = [UIColor whiteColor];
     return YES;
 }
 

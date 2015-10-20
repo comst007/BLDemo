@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="vCb-S2-aeu">
+            <objects>
+                <navigationController storyboardIdentifier="LZUserInfoNav" id="SB0-oM-ix3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zC4-ID-d0g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Gg4-Qi-Ni3" kind="relationship" relationship="rootViewController" id="moO-Iv-gIl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H5G-2H-VBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-14" y="360"/>
+        </scene>
+        <!--User Info View Controller-->
+        <scene sceneID="t1b-YA-GIW">
+            <objects>
+                <viewController id="Gg4-Qi-Ni3" customClass="LZUserInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sde-Ss-qZn"/>
+                        <viewControllerLayoutGuide type="bottom" id="PkC-N6-Mbx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GfP-Ou-2q0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ida-tU-MFJ">
+                                <rect key="frame" x="10" y="94" width="150" height="150"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="ljI-HY-9i3"/>
+                                    <constraint firstAttribute="width" constant="150" id="lpJ-M0-zh3"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="75"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJw-5x-Mfm" customClass="LZDownloadButton">
+                                <rect key="frame" x="45" y="252" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="1LO-wW-e2f"/>
+                                    <constraint firstAttribute="width" constant="80" id="Hul-ca-rzl"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressBarWidth">
+                                        <integer key="value" value="150"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progressBarHeight">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLd-sI-JiB">
+                                <rect key="frame" x="201" y="94" width="383" height="150"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="QYY-zo-Iq9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vY0-xo-VSG">
+                                <rect key="frame" x="103" y="550" width="394" height="30"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uLA-3a-3hT"/>
+                                </constraints>
+                                <state key="normal" title="选择上传图片">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="uploadButtonClick:" destination="Gg4-Qi-Ni3" eventType="touchUpInside" id="7vD-MR-EBH"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bbc-w9-cwo">
+                                <rect key="frame" x="200" y="342" width="200" height="200"/>
+                                <color key="backgroundColor" red="1" green="0.78391618789999995" blue="0.31814445330000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="YRb-ll-zmK"/>
+                                    <constraint firstAttribute="width" constant="200" id="tYr-2L-lAp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDv-XH-Ewb">
+                                <rect key="frame" x="244" y="277" width="340" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.43529412150382996" blue="0.81176471710205078" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zM4-Da-KxQ"/>
+                                </constraints>
+                                <state key="normal" title="播放歌曲">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidden" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playMp3:" destination="Gg4-Qi-Ni3" eventType="touchUpInside" id="G20-dA-3ND"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QJw-5x-Mfm" firstAttribute="top" secondItem="ida-tU-MFJ" secondAttribute="bottom" constant="8" id="A40-5Q-TJy"/>
+                            <constraint firstItem="vDv-XH-Ewb" firstAttribute="leading" secondItem="QJw-5x-Mfm" secondAttribute="trailing" constant="119" id="CVE-Pu-Eao"/>
+                            <constraint firstAttribute="trailing" secondItem="vDv-XH-Ewb" secondAttribute="trailing" constant="16" id="DRy-YW-obh"/>
+                            <constraint firstAttribute="centerX" secondItem="bbc-w9-cwo" secondAttribute="centerX" id="OPX-kB-tJO"/>
+                            <constraint firstAttribute="centerX" secondItem="QJw-5x-Mfm" secondAttribute="centerX" id="TIO-O0-Bkg"/>
+                            <constraint firstItem="fLd-sI-JiB" firstAttribute="leading" secondItem="ida-tU-MFJ" secondAttribute="trailing" constant="41" id="Tz8-fC-tUF"/>
+                            <constraint firstItem="ida-tU-MFJ" firstAttribute="centerY" secondItem="fLd-sI-JiB" secondAttribute="centerY" id="X2g-OI-1hI"/>
+                            <constraint firstItem="vY0-xo-VSG" firstAttribute="top" secondItem="bbc-w9-cwo" secondAttribute="bottom" constant="8" id="aGY-30-73D"/>
+                            <constraint firstItem="ida-tU-MFJ" firstAttribute="centerX" secondItem="QJw-5x-Mfm" secondAttribute="centerX" id="afG-TA-Bmi"/>
+                            <constraint firstAttribute="trailing" secondItem="fLd-sI-JiB" secondAttribute="trailing" constant="16" id="ekD-ul-IBB"/>
+                            <constraint firstItem="PkC-N6-Mbx" firstAttribute="top" secondItem="vY0-xo-VSG" secondAttribute="bottom" constant="20" id="hQw-he-cNk"/>
+                            <constraint firstItem="vDv-XH-Ewb" firstAttribute="top" secondItem="fLd-sI-JiB" secondAttribute="bottom" constant="33" id="hUz-mH-s0i"/>
+                            <constraint firstItem="ida-tU-MFJ" firstAttribute="top" secondItem="Sde-Ss-qZn" secondAttribute="bottom" constant="30" id="hjg-61-vQu"/>
+                            <constraint firstAttribute="trailing" secondItem="vY0-xo-VSG" secondAttribute="trailing" constant="103" id="oeN-Od-ZHq"/>
+                            <constraint firstItem="vY0-xo-VSG" firstAttribute="leading" secondItem="GfP-Ou-2q0" secondAttribute="leading" constant="103" id="tRR-Ba-QPl"/>
+                            <constraint firstAttribute="centerX" secondItem="ida-tU-MFJ" secondAttribute="centerX" id="xKX-mJ-mz1"/>
+                            <constraint firstItem="ida-tU-MFJ" firstAttribute="leading" secondItem="GfP-Ou-2q0" secondAttribute="leading" constant="10" id="z5c-yy-GH0"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="alpha">
+                                <integer key="value" value="0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="xKX-mJ-mz1"/>
+                                <exclude reference="TIO-O0-Bkg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZYN-Og-18n">
+                        <barButtonItem key="rightBarButtonItem" title="Homework" id="aos-AD-GyL">
+                            <connections>
+                                <action selector="showHomeworkMenu:" destination="Gg4-Qi-Ni3" id="pNq-gg-Meb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="aboutSelfLabel" destination="fLd-sI-JiB" id="94E-p0-rYN"/>
+                        <outlet property="downloadButton" destination="QJw-5x-Mfm" id="QR5-mi-Zlc"/>
+                        <outlet property="headiconImageview" destination="ida-tU-MFJ" id="YKX-Fj-xRt"/>
+                        <outlet property="playButton" destination="vDv-XH-Ewb" id="ndx-ik-ENF"/>
+                        <outlet property="uploadButton" destination="vY0-xo-VSG" id="mUK-vb-h0k"/>
+                        <outlet property="uploadImageview" destination="bbc-w9-cwo" id="bty-6w-NQX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Svp-0X-c7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="687" y="377"/>
+        </scene>
+    </scenes>
+</document>
