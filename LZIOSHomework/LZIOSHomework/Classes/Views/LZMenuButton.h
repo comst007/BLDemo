@@ -21,5 +21,6 @@ typedef void (^buttonClickBlock)(LZMenuButton *button);
 
 @property (nonatomic, copy) buttonClickBlock buttonHandle;
 
+@property (nonatomic, assign) NSInteger buttonTag;
 - (instancetype)initWithTitle:(NSString *)title;
 @end

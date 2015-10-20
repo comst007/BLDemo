@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import "LZTabBar.h"
+@interface AppDelegate : UIResponder <UIApplicationDelegate, LZTabBarDelegate, UIActionSheetDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 - (void)loadUserinfoFrame;
 
 - (void)loadUserLoginFrame;
+
+- (void)loadNumberOneFrame;
 @end
 

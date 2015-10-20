@@ -27,6 +27,17 @@
 		CB883EEC1BD6B6B800AE84F0 /* LZUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB883EEB1BD6B6B800AE84F0 /* LZUserInfoViewController.m */; };
 		CB883EF11BD6BC7200AE84F0 /* LZMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CB883EEE1BD6BC7200AE84F0 /* LZMenuButton.m */; };
 		CB883EF21BD6BC7200AE84F0 /* LZMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB883EF01BD6BC7200AE84F0 /* LZMenuView.m */; };
+		CB883EF91BD6D2AB00AE84F0 /* LZAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CB883EF81BD6D2AB00AE84F0 /* LZAnnotation.m */; };
+		CB883F081BD6D2D000AE84F0 /* LZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB883EFB1BD6D2D000AE84F0 /* LZBaseViewController.m */; };
+		CB883F091BD6D2D000AE84F0 /* LZFiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB883EFD1BD6D2D000AE84F0 /* LZFiveViewController.m */; };
+		CB883F0A1BD6D2D000AE84F0 /* LZFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB883EFF1BD6D2D000AE84F0 /* LZFourViewController.m */; };
+		CB883F0B1BD6D2D000AE84F0 /* LZOnewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB883F011BD6D2D000AE84F0 /* LZOnewViewController.m */; };
+		CB883F0C1BD6D2D000AE84F0 /* LZSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB883F031BD6D2D000AE84F0 /* LZSubViewController.m */; };
+		CB883F0D1BD6D2D000AE84F0 /* LZThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB883F051BD6D2D000AE84F0 /* LZThreeViewController.m */; };
+		CB883F0E1BD6D2D000AE84F0 /* LZTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB883F071BD6D2D000AE84F0 /* LZTwoViewController.m */; };
+		CB883F111BD6D93100AE84F0 /* LZTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CB883F101BD6D93100AE84F0 /* LZTabBar.m */; };
+		CB883F141BD6D94B00AE84F0 /* LZTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CB883F131BD6D94B00AE84F0 /* LZTabBarItem.m */; };
+		CB883F171BD6E3B000AE84F0 /* LZSixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB883F161BD6E3B000AE84F0 /* LZSixViewController.m */; };
 		CB982FEA1BD5D50400996185 /* LZIOSHomeworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB982FE91BD5D50400996185 /* LZIOSHomeworkTests.m */; };
 		CB98300A1BD69E5E00996185 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB982FF61BD69E5E00996185 /* AppDelegate.m */; };
 		CB98300D1BD69E5E00996185 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB9830051BD69E5E00996185 /* Images.xcassets */; };
@@ -81,6 +92,28 @@
 		CB883EEE1BD6BC7200AE84F0 /* LZMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMenuButton.m; sourceTree = "<group>"; };
 		CB883EEF1BD6BC7200AE84F0 /* LZMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZMenuView.h; sourceTree = "<group>"; };
 		CB883EF01BD6BC7200AE84F0 /* LZMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZMenuView.m; sourceTree = "<group>"; };
+		CB883EF71BD6D2AB00AE84F0 /* LZAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZAnnotation.h; sourceTree = "<group>"; };
+		CB883EF81BD6D2AB00AE84F0 /* LZAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZAnnotation.m; sourceTree = "<group>"; };
+		CB883EFA1BD6D2D000AE84F0 /* LZBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZBaseViewController.h; sourceTree = "<group>"; };
+		CB883EFB1BD6D2D000AE84F0 /* LZBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZBaseViewController.m; sourceTree = "<group>"; };
+		CB883EFC1BD6D2D000AE84F0 /* LZFiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFiveViewController.h; sourceTree = "<group>"; };
+		CB883EFD1BD6D2D000AE84F0 /* LZFiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZFiveViewController.m; sourceTree = "<group>"; };
+		CB883EFE1BD6D2D000AE84F0 /* LZFourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZFourViewController.h; sourceTree = "<group>"; };
+		CB883EFF1BD6D2D000AE84F0 /* LZFourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZFourViewController.m; sourceTree = "<group>"; };
+		CB883F001BD6D2D000AE84F0 /* LZOnewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZOnewViewController.h; sourceTree = "<group>"; };
+		CB883F011BD6D2D000AE84F0 /* LZOnewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZOnewViewController.m; sourceTree = "<group>"; };
+		CB883F021BD6D2D000AE84F0 /* LZSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSubViewController.h; sourceTree = "<group>"; };
+		CB883F031BD6D2D000AE84F0 /* LZSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSubViewController.m; sourceTree = "<group>"; };
+		CB883F041BD6D2D000AE84F0 /* LZThreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZThreeViewController.h; sourceTree = "<group>"; };
+		CB883F051BD6D2D000AE84F0 /* LZThreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZThreeViewController.m; sourceTree = "<group>"; };
+		CB883F061BD6D2D000AE84F0 /* LZTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTwoViewController.h; sourceTree = "<group>"; };
+		CB883F071BD6D2D000AE84F0 /* LZTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTwoViewController.m; sourceTree = "<group>"; };
+		CB883F0F1BD6D93100AE84F0 /* LZTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTabBar.h; sourceTree = "<group>"; };
+		CB883F101BD6D93100AE84F0 /* LZTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTabBar.m; sourceTree = "<group>"; };
+		CB883F121BD6D94B00AE84F0 /* LZTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZTabBarItem.h; sourceTree = "<group>"; };
+		CB883F131BD6D94B00AE84F0 /* LZTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZTabBarItem.m; sourceTree = "<group>"; };
+		CB883F151BD6E3B000AE84F0 /* LZSixViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSixViewController.h; sourceTree = "<group>"; };
+		CB883F161BD6E3B000AE84F0 /* LZSixViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSixViewController.m; sourceTree = "<group>"; };
 		CB982FCA1BD5D50400996185 /* LZIOSHomework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZIOSHomework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB982FE31BD5D50400996185 /* LZIOSHomeworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LZIOSHomeworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB982FE81BD5D50400996185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,6 +146,7 @@
 		CB883EB11BD6A85E00AE84F0 /* xibs */ = {
 			isa = PBXGroup;
 			children = (
+				CB883EF51BD6D1CF00AE84F0 /* 第一题 */,
 				CB883EB21BD6A85E00AE84F0 /* LaunchScreen.xib */,
 				CB883EB41BD6A85E00AE84F0 /* Login.storyboard */,
 				CB883EB61BD6A85E00AE84F0 /* UserInfo.storyboard */,
@@ -136,6 +170,36 @@
 				CB883EEB1BD6B6B800AE84F0 /* LZUserInfoViewController.m */,
 			);
 			name = LZUserInfo;
+			sourceTree = "<group>";
+		};
+		CB883EF51BD6D1CF00AE84F0 /* 第一题 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "第一题";
+			sourceTree = "<group>";
+		};
+		CB883EF61BD6D21600AE84F0 /* 第一题 */ = {
+			isa = PBXGroup;
+			children = (
+				CB883EFA1BD6D2D000AE84F0 /* LZBaseViewController.h */,
+				CB883EFB1BD6D2D000AE84F0 /* LZBaseViewController.m */,
+				CB883EFC1BD6D2D000AE84F0 /* LZFiveViewController.h */,
+				CB883EFD1BD6D2D000AE84F0 /* LZFiveViewController.m */,
+				CB883EFE1BD6D2D000AE84F0 /* LZFourViewController.h */,
+				CB883EFF1BD6D2D000AE84F0 /* LZFourViewController.m */,
+				CB883F001BD6D2D000AE84F0 /* LZOnewViewController.h */,
+				CB883F011BD6D2D000AE84F0 /* LZOnewViewController.m */,
+				CB883F021BD6D2D000AE84F0 /* LZSubViewController.h */,
+				CB883F031BD6D2D000AE84F0 /* LZSubViewController.m */,
+				CB883F041BD6D2D000AE84F0 /* LZThreeViewController.h */,
+				CB883F051BD6D2D000AE84F0 /* LZThreeViewController.m */,
+				CB883F061BD6D2D000AE84F0 /* LZTwoViewController.h */,
+				CB883F071BD6D2D000AE84F0 /* LZTwoViewController.m */,
+				CB883F151BD6E3B000AE84F0 /* LZSixViewController.h */,
+				CB883F161BD6E3B000AE84F0 /* LZSixViewController.m */,
+			);
+			name = "第一题";
 			sourceTree = "<group>";
 		};
 		CB982FC11BD5D50400996185 = {
@@ -211,6 +275,7 @@
 		CB982FF71BD69E5E00996185 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CB883EF61BD6D21600AE84F0 /* 第一题 */,
 				CB883EE91BD6B69800AE84F0 /* LZUserInfo */,
 				CB883EBB1BD6A8BD00AE84F0 /* LZUserlogin */,
 			);
@@ -229,6 +294,8 @@
 		CB982FF91BD69E5E00996185 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CB883EF71BD6D2AB00AE84F0 /* LZAnnotation.h */,
+				CB883EF81BD6D2AB00AE84F0 /* LZAnnotation.m */,
 				CB883EC51BD6AA5600AE84F0 /* LZUserInfo.h */,
 				CB883EC61BD6AA5600AE84F0 /* LZUserInfo.m */,
 			);
@@ -292,6 +359,10 @@
 				CB883EF01BD6BC7200AE84F0 /* LZMenuView.m */,
 				CB883EE61BD6AAB700AE84F0 /* LZDownloadButton.h */,
 				CB883EE71BD6AAB700AE84F0 /* LZDownloadButton.m */,
+				CB883F0F1BD6D93100AE84F0 /* LZTabBar.h */,
+				CB883F101BD6D93100AE84F0 /* LZTabBar.m */,
+				CB883F121BD6D94B00AE84F0 /* LZTabBarItem.h */,
+				CB883F131BD6D94B00AE84F0 /* LZTabBarItem.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -424,23 +495,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB883EC41BD6AA4600AE84F0 /* LZGlobal.m in Sources */,
+				CB883F0D1BD6D2D000AE84F0 /* LZThreeViewController.m in Sources */,
 				CB883EE21BD6AA9B00AE84F0 /* LZDownLoadRequest.m in Sources */,
 				CB98300F1BD69E5E00996185 /* main.m in Sources */,
 				CB883ECA1BD6AA6500AE84F0 /* LZParser.m in Sources */,
+				CB883F0A1BD6D2D000AE84F0 /* LZFourViewController.m in Sources */,
 				CB883ED21BD6AA7B00AE84F0 /* NSString+LZCoding.m in Sources */,
 				CB883ED91BD6AA8B00AE84F0 /* MBProgressHUD.m in Sources */,
+				CB883F0B1BD6D2D000AE84F0 /* LZOnewViewController.m in Sources */,
+				CB883F171BD6E3B000AE84F0 /* LZSixViewController.m in Sources */,
 				CB883EF21BD6BC7200AE84F0 /* LZMenuView.m in Sources */,
 				CB883EF11BD6BC7200AE84F0 /* LZMenuButton.m in Sources */,
 				CB883EBE1BD6A8FA00AE84F0 /* LZUserloginViewController.m in Sources */,
+				CB883F141BD6D94B00AE84F0 /* LZTabBarItem.m in Sources */,
 				CB883EE81BD6AAB700AE84F0 /* LZDownloadButton.m in Sources */,
+				CB883EF91BD6D2AB00AE84F0 /* LZAnnotation.m in Sources */,
 				CB883EEC1BD6B6B800AE84F0 /* LZUserInfoViewController.m in Sources */,
+				CB883F111BD6D93100AE84F0 /* LZTabBar.m in Sources */,
+				CB883F091BD6D2D000AE84F0 /* LZFiveViewController.m in Sources */,
+				CB883F081BD6D2D000AE84F0 /* LZBaseViewController.m in Sources */,
 				CB883EE51BD6AA9B00AE84F0 /* LZUploadRequest.m in Sources */,
 				CB883ED31BD6AA7B00AE84F0 /* NSString+LZMIMETYPE.m in Sources */,
+				CB883F0C1BD6D2D000AE84F0 /* LZSubViewController.m in Sources */,
 				CB98300A1BD69E5E00996185 /* AppDelegate.m in Sources */,
 				CB883ED11BD6AA7B00AE84F0 /* LZMultipartForm.m in Sources */,
 				CB883ED81BD6AA8B00AE84F0 /* KeychainItemWrapper.m in Sources */,
 				CB883EE31BD6AA9B00AE84F0 /* LZIconRequest.m in Sources */,
 				CB883EC71BD6AA5600AE84F0 /* LZUserInfo.m in Sources */,
+				CB883F0E1BD6D2D000AE84F0 /* LZTwoViewController.m in Sources */,
 				CB883EE41BD6AA9B00AE84F0 /* LZLoginRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

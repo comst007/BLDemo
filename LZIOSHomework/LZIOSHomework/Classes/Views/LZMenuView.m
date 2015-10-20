@@ -9,6 +9,7 @@
 #import "LZMenuView.h"
 #import "MBProgressHUD.h"
 #import "AppDelegate.h"
+#import "AppDelegate.h"
 #define  kExtraArea   30
 #define  kMenuButtonHeight  40
 #define  kVerticalPadding 30
@@ -61,18 +62,22 @@
         __weak typeof(self) weakSelf = self;
         self.buttonHandle = ^(LZMenuButton *btn){
             
-            MBProgressHUD *alert = [[MBProgressHUD alloc] initWithView:weakSelf.keywindow];
+//            MBProgressHUD *alert = [[MBProgressHUD alloc] initWithView:weakSelf.keywindow];
+//            
+//            alert.mode = MBProgressHUDModeText;
+//            alert.labelText = btn.buttonTitle;
+//            alert.minShowTime = 1;
+//            alert.removeFromSuperViewOnHide = YES;
+//            
+//            [weakSelf.keywindow addSubview:alert];
+//            
+//            [alert show:YES];
+//            
+//            [alert hide:YES afterDelay:1];
+            AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
             
-            alert.mode = MBProgressHUDModeText;
-            alert.labelText = btn.buttonTitle;
-            alert.minShowTime = 1;
-            alert.removeFromSuperViewOnHide = YES;
+            [appDelegate loadNumberOneFrame];
             
-            [weakSelf.keywindow addSubview:alert];
-            
-            [alert show:YES];
-            
-            [alert hide:YES afterDelay:1];
             
         };
         
@@ -96,6 +101,7 @@
         buttonY = startY + index * (buttonH + kVerticalPadding);
         
         LZMenuButton *buttonItem = [[LZMenuButton alloc] initWithTitle:titles[index]];
+        buttonItem.buttonTag = index + 1;
         buttonItem.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
         buttonItem.buttonHandle = self.buttonHandle;
         buttonItem.buttonColor = self.menuColor;
