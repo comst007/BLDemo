@@ -20,7 +20,9 @@
     UIImage *img = [UIImage imageNamed:@"bg1"];
    
     self.imgView.image = img;
-    self.title = @"One";
+    self.navigationItem.title = @"One";
+
+    //self.title = @"One";
     
     UIButton *pushBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [pushBtn setBackgroundColor:[UIColor clearColor]];

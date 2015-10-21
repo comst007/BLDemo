@@ -74,9 +74,14 @@
 //            [alert show:YES];
 //            
 //            [alert hide:YES afterDelay:1];
-            AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+            AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+            if (btn.buttonTag == 1) {
+                [appDelegate loadNumberOneFrame];
+            }
+            if (btn.buttonTag == 5) {
+                [appDelegate loadNumberFiveFrame];
+            }
             
-            [appDelegate loadNumberOneFrame];
             
             
         };

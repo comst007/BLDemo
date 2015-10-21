@@ -21,7 +21,8 @@
     // Do any additional setup after loading the view.
     UIImage *img = [UIImage imageNamed:@"bg4"];
     self.imgView.image = img;
-    self.title = @"four";
+    self.navigationItem.title = @"Four";
+
     
     UIWebView *webview = [[UIWebView alloc] init];
     self.webview = webview;

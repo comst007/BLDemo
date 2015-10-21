@@ -24,7 +24,8 @@
     UIImage *img = [UIImage imageNamed:@"bg5"];
     
     self.imgView.image = img;
-    self.title = @"Five";
+    self.navigationItem.title = @"Five";
+
     
     UILabel *label = [[UILabel alloc] init];
     self.label = label;
@@ -103,7 +104,7 @@
     
     //[self.mapview showAnnotations:self.mapview.annotations animated:YES];
     
-    [self startnavigation2];
+//    [self startnavigation2];
     
     
     

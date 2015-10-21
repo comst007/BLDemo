@@ -17,5 +17,8 @@
 - (void)loadUserLoginFrame;
 
 - (void)loadNumberOneFrame;
+
+- (void)loadNumberFiveFrame;
+
 @end
 

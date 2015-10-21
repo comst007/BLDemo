@@ -20,7 +20,8 @@
     // Do any additional setup after loading the view.
     UIImage *img = [UIImage imageNamed:@"bg3"];
     self.imgView.image = img;
-    self.title = @"Three";
+    self.navigationItem.title = @"Three";
+
     
     UIScrollView *scrollview = [[UIScrollView alloc] init];
     self.scrollview = scrollview;

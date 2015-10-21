@@ -13,7 +13,6 @@
 #import "LZThreeViewController.h"
 #import "LZFourViewController.h"
 #import "LZFiveViewController.h"
-#import "LZSixViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -66,22 +65,20 @@
     LZFiveViewController *fiveView = [[LZFiveViewController alloc] init];
     UINavigationController *nvc5 = [[UINavigationController alloc] initWithRootViewController:fiveView];
     
-    LZSixViewController *sixView = [[LZSixViewController alloc] init];
-    UINavigationController *nvc6 = [[UINavigationController alloc] initWithRootViewController:sixView];
-    
+   
 
     
     
-    tabBarVC.viewControllers = @[nvc1, nvc2, nvc3, nvc4, nvc5, nvc6];
+    tabBarVC.viewControllers = @[nvc1, nvc2, nvc3, nvc4, nvc5];
     
     [[UITabBar appearance] setBackgroundImage:[[UIImage alloc] init]];
     [[UITabBar appearance] setShadowImage:[[UIImage alloc] init]];
     
     LZTabBar *tabBar = [[LZTabBar alloc] initWithFrame:tabBarVC.tabBar.bounds];
     
-    CGFloat normalButtonWidth = ([UIScreen mainScreen].bounds.size.width * 4 / 5) / 5;
+    CGFloat normalButtonWidth = ([UIScreen mainScreen].bounds.size.width * 3 / 4) / 5;
     CGFloat tabBarHeight = CGRectGetHeight(tabBar.frame);
-    CGFloat publishItemWidth = [UIScreen mainScreen].bounds.size.width / 5;
+    CGFloat publishItemWidth = [UIScreen mainScreen].bounds.size.width / 4;
     
     
     
@@ -119,7 +116,7 @@
     UIImage *selectedImage = [UIImage imageNamed:selectedImageName];
     [item setImage:normalImage forState:UIControlStateNormal];
     [item setImage:selectedImage forState:UIControlStateSelected];
-    [item setImage:selectedImage forState:UIControlStateHighlighted];
+    //[item setImage:selectedImage forState:UIControlStateHighlighted];
     [item setTitleColor:[UIColor colorWithWhite:51 / 255.0 alpha:1] forState:UIControlStateNormal];
     [item setTitleColor:[UIColor colorWithWhite:51 / 255.0 alpha:1] forState:UIControlStateSelected];
     item.tabBarItemType = tabBarItemType;
@@ -140,10 +137,20 @@
     [actionSheet showInView:viewController.view];
 }
 
+
+
 #pragma mark - UIActionSheetDelegate
 
 - (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
     NSLog(@"buttonIndex = %ld", buttonIndex);
+}
+
+
+- (void)loadNumberFiveFrame{
+    UIStoryboard *SB = [UIStoryboard storyboardWithName:@"LZMapApp" bundle:nil];
+    
+    UINavigationController *nvc = [SB instantiateViewControllerWithIdentifier:@"LZMapAppNav"];
+    self.window.rootViewController = nvc;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
