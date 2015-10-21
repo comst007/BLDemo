@@ -155,7 +155,7 @@
     
     
     [self.view.layer removeAllAnimations];
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [appDelegate loadUserinfoFrame];
     
     

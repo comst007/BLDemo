@@ -10,4 +10,24 @@
 
 @implementation LZMapNavigationView
 
+
+- (IBAction)directionRequest{
+    if ([self.delegate respondsToSelector:@selector(MapNavigationViewDidDirectionRequest:)]) {
+        [self.delegate MapNavigationViewDidDirectionRequest:self];
+    }
+}
+
+- (IBAction)trafficTypeChanged{
+    
+    if (self.traficTypeSegment.selectedSegmentIndex == 0) {
+        self.trafficType = MKDirectionsTransportTypeWalking;
+    }else{
+        self.trafficType = MKDirectionsTransportTypeAutomobile;
+    }
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self endEditing:YES];
+}
+
 @end

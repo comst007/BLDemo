@@ -9,18 +9,31 @@
 #import "LZMapLocationView.h"
 
 @interface LZMapLocationView ()
-@property (nonatomic, strong) IBOutlet UIButton *searchBUtton;
 
-@property (nonatomic, strong) IBOutlet UITextField *longitudeTextfield;
 
-@property (nonatomic, strong) IBOutlet UITextField *latitudeTextfield;
-
-@property (nonatomic, strong) IBOutlet UITextField *locationDescriptionTextfield;
 @end
 
 @implementation LZMapLocationView
 
-- (IBAction)searchButtonClick{
+- (IBAction)reverseGeocoder{
+    
+    if ([self.delegate respondsToSelector:@selector(mapViewDidReverseGeocoding:)]) {
+        [self.delegate mapViewDidReverseGeocoding:self];
+    }
+    
+}
+
+
+- (IBAction)geocoder{
+    
+    if ([self.delegate respondsToSelector:@selector(mapViewDidGeocoding:)]) {
+        [self.delegate mapViewDidGeocoding:self];
+    }
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    [self endEditing:YES];
     
 }
 

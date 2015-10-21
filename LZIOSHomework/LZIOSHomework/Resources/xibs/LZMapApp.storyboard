@@ -47,6 +47,9 @@
                                             <segment title="Car"/>
                                             <segment title="Bus"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="trafficTypeChanged" destination="0TL-ED-Lkd" eventType="valueChanged" id="STe-Tg-vS6"/>
+                                        </connections>
                                     </segmentedControl>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="起点" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cql-dk-fp8">
                                         <rect key="frame" x="8" y="44" width="273" height="30"/>
@@ -88,6 +91,9 @@
                                                 <integer key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="directionRequest" destination="0TL-ED-Lkd" eventType="touchUpInside" id="a7u-t8-RZs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -112,11 +118,16 @@
                                         <integer key="value" value="0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="end" destination="Y6Q-kG-pt0" id="FlM-dr-wNQ"/>
+                                    <outlet property="start" destination="cql-dk-fp8" id="YY0-qD-PRg"/>
+                                    <outlet property="traficTypeSegment" destination="kzq-Co-6En" id="9Fg-nf-9Ds"/>
+                                </connections>
                             </view>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPG-nt-iFm" userLabel="location" customClass="LZMapLocationView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MPG-nt-iFm" userLabel="location" customClass="LZMapLocationView">
                                 <rect key="frame" x="0.0" y="64" width="600" height="120"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="地理位置" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="roZ-mj-y0T">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="地理位置" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="roZ-mj-y0T">
                                         <rect key="frame" x="30" y="82" width="540" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="2kG-jw-2n2"/>
@@ -130,22 +141,23 @@
                                             </mask>
                                         </variation>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROd-dE-lvo">
-                                        <rect key="frame" x="270" y="46" width="59" height="30"/>
-                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROd-dE-lvo">
+                                        <rect key="frame" x="285" y="46" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="59" id="9pL-hi-K8d"/>
                                             <constraint firstAttribute="height" constant="30" id="AlZ-Vw-K7u"/>
                                             <constraint firstAttribute="height" constant="30" id="MQm-LX-k4m"/>
-                                            <constraint firstAttribute="width" constant="59" id="Zaw-hh-OS8"/>
+                                            <constraint firstAttribute="width" constant="30" id="Zaw-hh-OS8"/>
                                         </constraints>
-                                        <state key="normal" title="Search">
+                                        <state key="normal" image="up">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -154,7 +166,7 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="searchButtonClick" destination="MPG-nt-iFm" eventType="touchUpInside" id="g0w-0Q-yOV"/>
+                                            <action selector="reverseGeocoder" destination="MPG-nt-iFm" eventType="touchUpInside" id="hDh-l2-hX6"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="经度" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="O4V-Bn-FJs">
@@ -181,6 +193,22 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSP-e8-AEZ">
+                                        <rect key="frame" x="196" y="46" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.80000001192092896" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="down">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="geocoder" destination="MPG-nt-iFm" eventType="touchUpInside" id="gem-Uu-3r9"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -190,6 +218,7 @@
                                     <constraint firstItem="roZ-mj-y0T" firstAttribute="trailing" secondItem="YVT-46-gYH" secondAttribute="trailing" id="4DM-XX-b8D"/>
                                     <constraint firstItem="ROd-dE-lvo" firstAttribute="top" secondItem="O4V-Bn-FJs" secondAttribute="bottom" constant="8" id="97r-eb-VHN"/>
                                     <constraint firstItem="O4V-Bn-FJs" firstAttribute="leading" secondItem="roZ-mj-y0T" secondAttribute="leading" id="ETR-z9-67u"/>
+                                    <constraint firstItem="aSP-e8-AEZ" firstAttribute="height" secondItem="ROd-dE-lvo" secondAttribute="height" id="G18-CH-Jv0"/>
                                     <constraint firstItem="roZ-mj-y0T" firstAttribute="width" secondItem="YVT-46-gYH" secondAttribute="width" multiplier="2" constant="20" id="HFU-Oz-MO3"/>
                                     <constraint firstItem="roZ-mj-y0T" firstAttribute="top" secondItem="ROd-dE-lvo" secondAttribute="bottom" constant="6" id="JLt-Z7-NjT"/>
                                     <constraint firstAttribute="centerX" secondItem="O4V-Bn-FJs" secondAttribute="centerX" constant="116.5" id="JlE-m8-7KS"/>
@@ -197,9 +226,11 @@
                                     <constraint firstItem="ROd-dE-lvo" firstAttribute="top" secondItem="O4V-Bn-FJs" secondAttribute="bottom" constant="8" id="Kd8-Rq-BAt"/>
                                     <constraint firstAttribute="height" constant="120" id="LyY-2Y-RL6"/>
                                     <constraint firstItem="ROd-dE-lvo" firstAttribute="top" secondItem="YVT-46-gYH" secondAttribute="bottom" constant="8" id="ORz-wz-vRH"/>
+                                    <constraint firstItem="aSP-e8-AEZ" firstAttribute="bottom" secondItem="ROd-dE-lvo" secondAttribute="bottom" id="QW3-BD-PCh"/>
                                     <constraint firstAttribute="trailing" secondItem="roZ-mj-y0T" secondAttribute="trailing" constant="30" id="RDu-5S-tCv"/>
                                     <constraint firstAttribute="centerX" secondItem="O4V-Bn-FJs" secondAttribute="centerX" constant="142" id="TM7-fK-5R4"/>
                                     <constraint firstItem="ROd-dE-lvo" firstAttribute="top" secondItem="YVT-46-gYH" secondAttribute="bottom" constant="8" id="b1I-NX-HfP"/>
+                                    <constraint firstItem="ROd-dE-lvo" firstAttribute="leading" secondItem="aSP-e8-AEZ" secondAttribute="trailing" constant="59" id="cHf-jl-zTQ"/>
                                     <constraint firstItem="O4V-Bn-FJs" firstAttribute="leading" secondItem="roZ-mj-y0T" secondAttribute="leading" id="d3e-dz-62J"/>
                                     <constraint firstItem="roZ-mj-y0T" firstAttribute="leading" secondItem="MPG-nt-iFm" secondAttribute="leading" constant="30" id="dCE-zg-JXN"/>
                                     <constraint firstItem="roZ-mj-y0T" firstAttribute="centerY" secondItem="ROd-dE-lvo" secondAttribute="centerY" id="faV-y9-fJY"/>
@@ -209,6 +240,7 @@
                                     <constraint firstAttribute="trailing" secondItem="roZ-mj-y0T" secondAttribute="trailing" constant="30" id="pKZ-BU-pcf"/>
                                     <constraint firstItem="O4V-Bn-FJs" firstAttribute="width" secondItem="roZ-mj-y0T" secondAttribute="width" multiplier="0.5" constant="-20" id="q2g-ML-RzJ"/>
                                     <constraint firstItem="roZ-mj-y0T" firstAttribute="leading" secondItem="ROd-dE-lvo" secondAttribute="trailing" constant="21" id="rUD-OG-wDh"/>
+                                    <constraint firstItem="aSP-e8-AEZ" firstAttribute="width" secondItem="ROd-dE-lvo" secondAttribute="width" id="xLj-gz-hXX"/>
                                     <constraint firstAttribute="centerY" secondItem="ROd-dE-lvo" secondAttribute="centerY" id="zdj-zP-vk7"/>
                                 </constraints>
                                 <variation key="default">
@@ -231,7 +263,7 @@
                                 </variation>
                                 <connections>
                                     <outlet property="latitudeTextfield" destination="YVT-46-gYH" id="Dfq-Ci-U5H"/>
-                                    <outlet property="locationDescriptionTextfield" destination="roZ-mj-y0T" id="ju3-rk-HbD"/>
+                                    <outlet property="locationDescTextfield" destination="roZ-mj-y0T" id="9U5-bg-Stc"/>
                                     <outlet property="longitudeTextfield" destination="O4V-Bn-FJs" id="kAi-wk-nku"/>
                                     <outlet property="searchBUtton" destination="ROd-dE-lvo" id="bdF-Hz-F60"/>
                                 </connections>
@@ -256,6 +288,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="mn6-ft-Zeq">
                         <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="uiB-gh-OG5">
+                            <connections>
+                                <action selector="addAnnotation:" destination="LHN-ZH-kTQ" id="81T-7q-ECf"/>
+                            </connections>
+                        </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="wUc-ff-Jf7">
                             <rect key="frame" x="229" y="5.5" width="142" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -273,10 +310,16 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
+                        <barButtonItem key="rightBarButtonItem" title="我的位置" id="ADi-bg-07k">
+                            <connections>
+                                <action selector="getMyLocation:" destination="LHN-ZH-kTQ" id="iYA-Dp-k4W"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="locationView" destination="MPG-nt-iFm" id="7gd-0N-Pwz"/>
                         <outlet property="mapSegmentControl" destination="mpp-kv-Ce6" id="ybK-VY-2Qp"/>
+                        <outlet property="mapview" destination="gjP-wS-jel" id="UUC-ip-5wy"/>
                         <outlet property="navigationView" destination="0TL-ED-Lkd" id="h6I-vg-nOB"/>
                     </connections>
                 </viewController>
@@ -285,4 +328,8 @@
             <point key="canvasLocation" x="234" y="-2358"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="down" width="30" height="30"/>
+        <image name="up" width="30" height="30"/>
+    </resources>
 </document>

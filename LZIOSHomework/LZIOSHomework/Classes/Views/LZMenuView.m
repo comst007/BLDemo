@@ -59,8 +59,7 @@
         
         self.menuColor = [UIColor colorWithRed:0 green:0.722 blue:1 alpha:1];
         
-        __weak typeof(self) weakSelf = self;
-        self.buttonHandle = ^(LZMenuButton *btn){
+                self.buttonHandle = ^(LZMenuButton *btn){
             
 //            MBProgressHUD *alert = [[MBProgressHUD alloc] initWithView:weakSelf.keywindow];
 //            
